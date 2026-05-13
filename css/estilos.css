@@ -1,6 +1,16 @@
 /* Estilos base Defany Industria */
-body {
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -60,12 +70,19 @@ nav {
     display: block;
 }
 
-/* Botón tienda */
-.tienda a {
-    background: #f39c12;
-    color: black;
-    font-weight: bold;
+/* Botón WhatsApp nav */
+.btn-whatsapp-nav a {
+    background: #25D366;
+    color: #fff !important;
+    font-weight: 600;
     border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.btn-whatsapp-nav a:hover {
+    background: #1ebe5d;
+    color: #fff !important;
 }
 
 .hero {
@@ -85,12 +102,16 @@ footer {
 .header {
     background-color: #FFFFFF;
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
 }
 
 .header-container {
     max-width: 1200px;
     margin: auto;
-    padding: 10px 20px;
+    padding: 8px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,7 +119,7 @@ footer {
 
 /* LOGO */
 .logo img {
-    height: 120px;
+    height: 75px;
 }
 
 /* NAV */
@@ -390,4 +411,70 @@ footer {
     color: #FFFFFF;
     padding: 60px 20px;
     text-align: center;
+}
+
+/* ===== HERO VIDEO ===== */
+.hero-video {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 91px);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-video__bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero-video__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 4, 43, 0.65);
+}
+
+.hero-video__content {
+    position: relative;
+    z-index: 1;
+    color: #FFFFFF;
+    max-width: 850px;
+    padding: 20px;
+}
+
+.hero-video__tag {
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    opacity: 0.8;
+}
+
+.hero-video__content h1 {
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-video__content > p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.hero-video__buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
