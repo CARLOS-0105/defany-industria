@@ -605,3 +605,201 @@
         font-size: 1.7rem;
     }
 }
+
+/* ================================================================
+   SECCIÓN VAYREMEX
+   ================================================================ */
+.mrc-vay {
+    background: #F4F6F8;
+    padding: 88px 0;
+    border-top: 1px solid #E8EFF5;
+}
+
+/* ── Grid 2 columnas (imagen izq, texto der) ── */
+.mrc-vay__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+}
+
+/* ── Imagen izquierda ── */
+.mrc-vay__img-wrap {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 16px 56px rgba(2, 4, 43, 0.12);
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    transition: box-shadow 0.3s;
+}
+
+.mrc-vay__img-wrap:hover {
+    box-shadow: 0 24px 72px rgba(2, 4, 43, 0.18);
+}
+
+.mrc-vay__img-wrap img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* ── Contenido derecho ── */
+.mrc-vay__content {
+    padding-top: 8px;
+}
+
+.mrc-vay__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #D5EBF8;
+    color: #02042B;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+}
+
+.mrc-vay__title {
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 800;
+    color: #02042B;
+    margin: 0 0 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+}
+
+.mrc-vay__text {
+    color: #5B5B5B;
+    font-size: 0.95rem;
+    line-height: 1.78;
+    margin: 0 0 16px;
+}
+
+.mrc-vay__text strong {
+    color: #02042B;
+    font-weight: 600;
+}
+
+/* ── Tarjeta de productos ── */
+.mrc-vay__products {
+    margin-top: 28px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 24px 28px;
+    border: 1px solid #E0EAF4;
+    box-shadow: 0 2px 12px rgba(2, 4, 43, 0.05);
+}
+
+.mrc-vay__products h4 {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #02042B;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mrc-vay__products h4 i {
+    color: #4A7FA5;
+    font-size: 0.85rem;
+}
+
+.mrc-vay__products ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 16px;
+}
+
+.mrc-vay__products ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    color: #5B5B5B;
+    line-height: 1.4;
+    transition: color 0.2s;
+}
+
+.mrc-vay__products ul li:hover {
+    color: #02042B;
+}
+
+.mrc-vay__products ul li i {
+    color: #02042B;
+    font-size: 0.6rem;
+    flex-shrink: 0;
+}
+
+.mrc-vay__note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.82rem;
+    color: #7A8A9A;
+    line-height: 1.6;
+    border-top: 1px solid #EBF0F6;
+    padding-top: 16px;
+    margin: 0;
+    font-style: italic;
+}
+
+.mrc-vay__note i {
+    color: #02042B;
+    font-size: 0.85rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+    opacity: 0.6;
+}
+
+/* ── Responsive VAYREMEX ── */
+@media (max-width: 1024px) {
+    .mrc-vay__grid {
+        gap: 44px;
+    }
+
+    .mrc-vay__products ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .mrc-vay {
+        padding: 60px 0 52px;
+    }
+
+    .mrc-vay__grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .mrc-vay__img-wrap {
+        padding: 24px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .mrc-vay__products {
+        padding: 20px 18px;
+    }
+
+    .mrc-vay__title {
+        font-size: 1.7rem;
+    }
+}
