@@ -1,29 +1,30 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Defany Industrial</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/contacto.css">
 </head>
 <body>
-    
-    <!-- ===== HEADER ===== -->
+
+<!-- ===== HEADER ===== -->
 <header class="header">
     <div class="header-container">
-
         <div class="logo">
             <a href="index.html">
                 <img src="img/logosf2.png" alt="Defany Industrial">
             </a>
         </div>
-
         <nav class="nav">
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="marcas.html">Marcas</a></li>
-
                 <li class="dropdown">
                     <a href="productos.html" tabindex="0">Productos</a>
                     <ul class="dropdown-menu">
@@ -41,38 +42,265 @@
                         <li><a href="productos/material-de-limpieza.html">Material de Limpieza</a></li>
                     </ul>
                 </li>
-
                 <li class="dropdown">
                     <a href="servicios.html" tabindex="0">Servicios</a>
                     <ul class="dropdown-menu">
                         <li><a href="servicios/recipientes-presion.html">Recipientes sujetos a presión</a></li>
                         <li><a href="servicios/mantenimiento-estructural.html">Mantenimiento estructural</a></li>
                         <li><a href="servicios/servicio-calderas.html">Servicios a calderas</a></li>
-                        <li><a href="aislamientostermicos.html">Aislamientos T&eacute;rmicos</a></li>
+                        <li><a href="aislamientostermicos.html">Aislamientos Térmicos</a></li>
                         <li><a href="airesacondicionados.html">Aires Acondicionados</a></li>
                     </ul>
                 </li>
-
-                <li><a href="contacto.html">Contacto</a></li>
-
+                <li><a href="contacto.html" class="active">Contacto</a></li>
                 <li class="btn-whatsapp-nav">
                     <a href="https://wa.me/525585318323" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
                 </li>
             </ul>
         </nav>
-
     </div>
 </header>
 <!-- ===== FIN HEADER ===== -->
 
+<main>
 
+    <!-- ===== HERO ===== -->
+    <section class="cnt-hero">
+        <div class="cnt-hero__overlay"></div>
+        <div class="cnt-hero__content">
+            <span class="cnt-hero__sub">DEFANY INDUSTRIAL</span>
+            <h1 class="cnt-hero__title">Contacto</h1>
+            <div class="cnt-hero__line"></div>
+        </div>
+    </section>
 
+    <!-- ===== SECCIÓN 1: INFORMACIÓN DE CONTACTO ===== -->
+    <section class="cnt-info">
+        <div class="cnt-container">
+            <div class="cnt-info__grid">
 
-<!-- Pie de pagina -->
+                <!-- Correos -->
+                <div class="cnt-info__card cnt-animate">
+                    <div class="cnt-info__icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <h3>Correos de contacto</h3>
+                    <ul class="cnt-info__list">
+                        <li><a href="mailto:cotizaciones@defany.com.mx">cotizaciones@defany.com.mx</a></li>
+                        <li><a href="mailto:cotizaciones2@defany.com.mx">cotizaciones2@defany.com.mx</a></li>
+                    </ul>
+                </div>
+
+                <!-- Teléfono -->
+                <div class="cnt-info__card cnt-animate">
+                    <div class="cnt-info__icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3>Teléfono</h3>
+                    <p class="cnt-info__placeholder">
+                        <a href="tel:5553053149">(55) 5305 3149</a>
+                    </p>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="cnt-info__card cnt-animate">
+                    <div class="cnt-info__icon cnt-info__icon--wa">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p class="cnt-info__placeholder">+52 55 8531 8323</p>
+                    <a href="https://wa.me/525585318323" target="_blank" class="cnt-info__wabtn">
+                        <i class="fa-brands fa-whatsapp"></i> Enviar mensaje
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN 2: OFICINA ===== -->
+    <section class="cnt-ubicacion cnt-ubicacion--gray">
+        <div class="cnt-container">
+            <div class="cnt-ubicacion__grid">
+
+                <div class="cnt-ubicacion__map cnt-animate">
+                    <iframe
+                        src="https://www.google.com/maps?q=Calle+Francisco+Javier+Mina+62,+Col.+Margarita+Maza+de+Juarez,+Atizapan+de+Zaragoza,+Estado+de+Mexico,+52926&output=embed"
+                        width="100%" height="420" style="border:0;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Oficina Defany Industrial">
+                    </iframe>
+                </div>
+
+                <div class="cnt-ubicacion__info cnt-animate">
+                    <span class="cnt-ubicacion__tag">Ubicación</span>
+                    <h2>Oficina</h2>
+                    <p class="cnt-ubicacion__desc">
+                        Visítanos en nuestras oficinas para recibir atención personalizada, asesoría técnica y soporte especializado para tus proyectos industriales.
+                    </p>
+                    <div class="cnt-ubicacion__addr">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <address>
+                            Calle Francisco Javier Mina No. 62<br>
+                            Col. Margarita Maza de Juárez<br>
+                            Atizapán de Zaragoza, Estado de México<br>
+                            C.P. 52926
+                        </address>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN 3: ALMACÉN ===== -->
+    <section class="cnt-ubicacion cnt-ubicacion--white cnt-ubicacion--reverse">
+        <div class="cnt-container">
+            <div class="cnt-ubicacion__grid">
+
+                <div class="cnt-ubicacion__info cnt-animate">
+                    <span class="cnt-ubicacion__tag">Logística</span>
+                    <h2>Almacén Defany</h2>
+                    <p class="cnt-ubicacion__desc">
+                        Contamos con un área de almacén y logística para atención operativa, suministro de materiales y entrega eficiente de productos industriales.
+                    </p>
+                    <div class="cnt-ubicacion__addr">
+                        <i class="fa-solid fa-warehouse"></i>
+                        <address>
+                            Calle Benito Juárez No. 21<br>
+                            Col. Margarita Maza de Juárez<br>
+                            Atizapán de Zaragoza, Estado de México<br>
+                            C.P. 52926
+                        </address>
+                    </div>
+                </div>
+
+                <div class="cnt-ubicacion__map cnt-animate">
+                    <iframe
+                        src="https://www.google.com/maps?q=Calle+Benito+Juarez+21,+Col.+Margarita+Maza+de+Juarez,+Atizapan+de+Zaragoza,+Estado+de+Mexico,+52926&output=embed"
+                        width="100%" height="420" style="border:0;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Almacén Defany">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN 4: CORPORATIVO ===== -->
+    <section class="cnt-corp">
+        <div class="cnt-container">
+            <div class="cnt-corp__card cnt-animate">
+                <div class="cnt-corp__icon">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+                <span class="cnt-corp__tag">Sede corporativa</span>
+                <h2>Corporativo</h2>
+                <p>También contamos con oficinas corporativas para atención administrativa y comercial.</p>
+                <div class="cnt-corp__addr">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <address>
+                        Boulevard Manuel Ávila Camacho Int. 600-A, Ext. 1903<br>
+                        Colonia Ciudad Satélite<br>
+                        Naucalpan de Juárez, Estado de México<br>
+                        C.P. 53100
+                    </address>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN 5: FORMULARIO ===== -->
+    <section class="cnt-form">
+        <div class="cnt-container">
+            <div class="cnt-form__header cnt-animate">
+                <h2>Envíanos un mensaje</h2>
+                <p>Completa el siguiente formulario y nuestro equipo se pondrá en contacto contigo.</p>
+            </div>
+
+            <!--
+                ╔══════════════════════════════════════════════════════════════╗
+                ║  CONFIGURACIÓN DE ENVÍO — ELIGE UNA OPCIÓN:                 ║
+                ║                                                              ║
+                ║  OPCIÓN 1 — FormSubmit (sin servidor, gratis):               ║
+                ║    action="https://formsubmit.co/cotizaciones@defany.com.mx" ║
+                ║    Agrega: <input type="hidden" name="_cc"                   ║
+                ║             value="cotizaciones2@defany.com.mx">             ║
+                ║    Agrega: <input type="hidden" name="_subject"              ║
+                ║             value="Nuevo mensaje desde defany.com.mx">       ║
+                ║                                                              ║
+                ║  OPCIÓN 2 — PHP (servidor propio):                           ║
+                ║    action="enviar.php" method="POST"                         ║
+                ║    Crea enviar.php con mail() a ambos correos.               ║
+                ║                                                              ║
+                ║  OPCIÓN 3 — Backend propio:                                  ║
+                ║    action="https://tu-api.com/contacto" method="POST"        ║
+                ╚══════════════════════════════════════════════════════════════╝
+            -->
+            <form class="cnt-form__form cnt-animate" action="#" method="POST">
+
+                <div class="cnt-form__row">
+                    <div class="cnt-form__group">
+                        <label for="nombre">Nombre completo <span>*</span></label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                    </div>
+                    <div class="cnt-form__group">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
+                    </div>
+                </div>
+
+                <div class="cnt-form__row">
+                    <div class="cnt-form__group">
+                        <label for="correo">Correo electrónico <span>*</span></label>
+                        <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required>
+                    </div>
+                    <div class="cnt-form__group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+52 55 XXXX XXXX">
+                    </div>
+                </div>
+
+                <div class="cnt-form__row">
+                    <div class="cnt-form__group cnt-form__group--full">
+                        <label for="asunto">Asunto <span>*</span></label>
+                        <input type="text" id="asunto" name="asunto" placeholder="¿En qué podemos ayudarte?" required>
+                    </div>
+                </div>
+
+                <div class="cnt-form__row">
+                    <div class="cnt-form__group cnt-form__group--full">
+                        <label for="mensaje">Mensaje <span>*</span></label>
+                        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Describe tu proyecto, necesidad o consulta..." required></textarea>
+                    </div>
+                </div>
+
+                <div class="cnt-form__submit">
+                    <button type="submit" class="cnt-form__btn">
+                        <i class="fa-solid fa-paper-plane"></i> Enviar mensaje
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== CTA FINAL ===== -->
+    <section class="cnt-cta">
+        <div class="cnt-cta__content cnt-animate">
+            <h2>¿Necesitas atención inmediata?</h2>
+            <p>Contáctanos directamente por WhatsApp y recibe atención personalizada para tu proyecto.</p>
+            <a href="https://wa.me/525585318323" target="_blank" class="cnt-cta__btn">
+                <i class="fa-brands fa-whatsapp"></i> Contactar por WhatsApp
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
     <div class="footer-container">
 
-        <!-- BLOQUE 1 -->
         <div class="footer-block">
             <h3>DEFANY</h3>
             <ul class="footer-links">
@@ -83,13 +311,9 @@
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
-
-             <li><a href="terminos.html">Terminos y Condiciones</a></li>
-
-            </a>
+            <li><a href="terminos.html">Términos y Condiciones</a></li>
         </div>
 
-        <!-- BLOQUE 2 -->
         <div class="footer-block">
             <h3>Productos</h3>
             <ul class="footer-links">
@@ -101,7 +325,6 @@
             </ul>
         </div>
 
-        <!-- BLOQUE 3 -->
         <div class="footer-block">
             <h3>Contacto</h3>
             <p>
@@ -110,28 +333,19 @@
                 Col. Margarita Maza de Juárez<br>
                 Atizapán de Zaragoza, Edo. Méx. 52926
             </p>
-
             <p><strong>Teléfono:</strong> 55 5305 3149</p>
-
             <p>
                 <strong>WhatsApp:</strong><br>
-                <a href="https://wa.me/525585318323" target="_blank">
-                    55 8531 8323
-                </a>
+                <a href="https://wa.me/525585318323" target="_blank">55 8531 8323</a>
             </p>
-
             <p>
                 <strong>Correo:</strong><br>
-                <a href="mailto:cotizaciones@defany.com.mx">
-                    cotizaciones@defany.com.mx
-                </a>
+                <a href="mailto:cotizaciones@defany.com.mx">cotizaciones@defany.com.mx</a>
             </p>
         </div>
 
-        <!-- BLOQUE 4 -->
         <div class="footer-block footer-logo">
             <img src="img/logowhitesf.png" alt="Defany Industrial">
-
             <p>
                 Boulevard Manuel Ávila Camacho interior 600-A, Ext. 1903<br>
                 Colonia Ciudad Satélite<br>
@@ -140,9 +354,19 @@
         </div>
 
     </div>
-
-    <!-- PIE FINAL -->
     <div class="footer-bottom">
         © 2026 Defany Industria
     </div>
 </footer>
+
+<script>
+    const cntObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) e.target.classList.add('visible');
+        });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.cnt-animate').forEach(el => cntObserver.observe(el));
+</script>
+
+</body>
+</html>

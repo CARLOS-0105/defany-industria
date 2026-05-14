@@ -1,29 +1,30 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcas - Defany Industrial</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/marcas.css">
 </head>
 <body>
-    
-    <!-- ===== HEADER ===== -->
+
+<!-- ===== HEADER ===== -->
 <header class="header">
     <div class="header-container">
-
         <div class="logo">
             <a href="index.html">
                 <img src="img/logosf2.png" alt="Defany Industrial">
             </a>
         </div>
-
         <nav class="nav">
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="marcas.html">Marcas</a></li>
-
+                <li><a href="marcas.html" class="active">Marcas</a></li>
                 <li class="dropdown">
                     <a href="productos.html" tabindex="0">Productos</a>
                     <ul class="dropdown-menu">
@@ -41,37 +42,146 @@
                         <li><a href="productos/material-de-limpieza.html">Material de Limpieza</a></li>
                     </ul>
                 </li>
-
                 <li class="dropdown">
                     <a href="servicios.html" tabindex="0">Servicios</a>
                     <ul class="dropdown-menu">
                         <li><a href="servicios/recipientes-presion.html">Recipientes sujetos a presión</a></li>
                         <li><a href="servicios/mantenimiento-estructural.html">Mantenimiento estructural</a></li>
                         <li><a href="servicios/servicio-calderas.html">Servicios a calderas</a></li>
-                        <li><a href="aislamientostermicos.html">Aislamientos T&eacute;rmicos</a></li>
+                        <li><a href="aislamientostermicos.html">Aislamientos Térmicos</a></li>
                         <li><a href="airesacondicionados.html">Aires Acondicionados</a></li>
                     </ul>
                 </li>
-
                 <li><a href="contacto.html">Contacto</a></li>
-
                 <li class="btn-whatsapp-nav">
                     <a href="https://wa.me/525585318323" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
                 </li>
             </ul>
         </nav>
-
     </div>
 </header>
 <!-- ===== FIN HEADER ===== -->
 
+<main>
 
+    <!-- ===== HERO ===== -->
+    <section class="mrc-hero">
+        <div class="mrc-hero__overlay"></div>
+        <div class="mrc-hero__content">
+            <span class="mrc-hero__sub">DISTRIBUIDORES Y ALIADOS INDUSTRIALES</span>
+            <h1 class="mrc-hero__title">Marcas</h1>
+            <div class="mrc-hero__line"></div>
+        </div>
+    </section>
 
-<!-- Pie de pagina -->
+    <!-- ===== BLOQUE ARMSTRONG INTERNATIONAL ===== -->
+    <section class="mrc-arm">
+        <div class="mrc-container">
+
+            <!-- GRID: Imagen izquierda + Contenido derecho -->
+            <div class="mrc-arm__grid">
+
+                <!-- IMAGEN -->
+                <div class="mrc-arm__img-wrap mrc-animate">
+                    <img src="img/portada-armatrong.png" alt="Armstrong International — Distribuidor autorizado Defany Industrial">
+                </div>
+
+                <!-- CONTENIDO -->
+                <div class="mrc-arm__content mrc-animate">
+                    <span class="mrc-arm__badge">
+                        <i class="fa-solid fa-certificate"></i> Distribuidor autorizado
+                    </span>
+                    <h2 class="mrc-arm__title">Armstrong International</h2>
+                    <p class="mrc-arm__text">
+                        Armstrong International es reconocida mundialmente por sus soluciones para sistemas de vapor, condensado, control térmico y eficiencia energética industrial. Con más de 100 años de experiencia, su tecnología optimiza procesos en sectores como papel, cartón, textil, alimenticio y manufactura.
+                    </p>
+                    <p class="mrc-arm__text">
+                        En <strong>Defany Industrial</strong> somos distribuidores autorizados en México, ofreciendo suministro, asesoría técnica, instalación y soporte especializado para sistemas y equipos de vapor industriales.
+                    </p>
+
+                    <!-- PRODUCTOS DESTACADOS -->
+                    <div class="mrc-arm__products">
+                        <h4><i class="fa-solid fa-layer-group"></i> Productos destacados</h4>
+                        <ul>
+                            <li><i class="fa-solid fa-chevron-right"></i> Trampas de vapor Serie 800</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> Trampas de vapor Serie 200</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> Trampas termodinámicas</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> Filtros tipo Y</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> Válvulas eliminadoras de aire</li>
+                            <li><i class="fa-solid fa-chevron-right"></i> Reguladores de presión</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CARRUSEL DE PRODUCTOS -->
+            <div class="mrc-arm__carousel-wrap mrc-animate">
+                <p class="mrc-arm__carousel-label">Equipos y soluciones Armstrong</p>
+                <div class="mrc-arm__carousel">
+                    <div class="mrc-arm__carousel-track">
+                        <!-- Set original -->
+                        <div class="mrc-arm__carousel-item">
+                            <img src="img/flotador-trampa.png" alt="Trampa flotador Armstrong">
+                        </div>
+                        <div class="mrc-arm__carousel-item">
+                            <img src="img/filtro-y.png" alt="Filtro tipo Y Armstrong">
+                        </div>
+                        <div class="mrc-arm__carousel-item">
+                            <img src="img/portadatrampa.png" alt="Trampa de vapor Armstrong">
+                        </div>
+                        <div class="mrc-arm__carousel-item">
+                            <img src="img/trampa-flotador.png" alt="Trampa de flotador Armstrong">
+                        </div>
+                        <div class="mrc-arm__carousel-item">
+                            <img src="img/trampa-serie-200.png" alt="Trampa serie 200 Armstrong">
+                        </div>
+                        <div class="mrc-arm__carousel-item">
+                            <img src="img/trampa-termodinamica.png" alt="Trampa termodinámica Armstrong">
+                        </div>
+                        <!-- Duplicado para loop infinito -->
+                        <div class="mrc-arm__carousel-item">
+                            <img src="img/flotador-trampa.png" alt="Trampa flotador Armstrong">
+                        </div>
+                        <div class="mrc-arm__carousel-item">
+                            <img src="img/filtro-y.png" alt="Filtro tipo Y Armstrong">
+                        </div>
+                        <div class="mrc-arm__carousel-item">
+                            <img src="img/portadatrampa.png" alt="Trampa de vapor Armstrong">
+                        </div>
+                        <div class="mrc-arm__carousel-item">
+                            <img src="img/trampa-flotador.png" alt="Trampa de flotador Armstrong">
+                        </div>
+                        <div class="mrc-arm__carousel-item">
+                            <img src="img/trampa-serie-200.png" alt="Trampa serie 200 Armstrong">
+                        </div>
+                        <div class="mrc-arm__carousel-item">
+                            <img src="img/trampa-termodinamica.png" alt="Trampa termodinámica Armstrong">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE INFERIOR: TEXTO + CTA -->
+            <div class="mrc-arm__footer mrc-animate">
+                <div class="mrc-arm__footer-divider"></div>
+                <p class="mrc-arm__footer-text">
+                    Ofrecemos soluciones integrales para sistemas de vapor, condensado y eficiencia energética industrial, respaldadas por la tecnología Armstrong International.
+                </p>
+                <a href="contacto.html" class="mrc-arm__cta">
+                    <i class="fa-solid fa-envelope"></i> Solicitar información
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
     <div class="footer-container">
 
-        <!-- BLOQUE 1 -->
         <div class="footer-block">
             <h3>DEFANY</h3>
             <ul class="footer-links">
@@ -82,13 +192,9 @@
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
-
-             <li><a href="terminos.html">Terminos y Condiciones</a></li>
-
-            </a>
+            <li><a href="terminos.html">Términos y Condiciones</a></li>
         </div>
 
-        <!-- BLOQUE 2 -->
         <div class="footer-block">
             <h3>Productos</h3>
             <ul class="footer-links">
@@ -100,7 +206,6 @@
             </ul>
         </div>
 
-        <!-- BLOQUE 3 -->
         <div class="footer-block">
             <h3>Contacto</h3>
             <p>
@@ -109,28 +214,19 @@
                 Col. Margarita Maza de Juárez<br>
                 Atizapán de Zaragoza, Edo. Méx. 52926
             </p>
-
             <p><strong>Teléfono:</strong> 55 5305 3149</p>
-
             <p>
                 <strong>WhatsApp:</strong><br>
-                <a href="https://wa.me/525585318323" target="_blank">
-                    55 8531 8323
-                </a>
+                <a href="https://wa.me/525585318323" target="_blank">55 8531 8323</a>
             </p>
-
             <p>
                 <strong>Correo:</strong><br>
-                <a href="mailto:cotizaciones@defany.com.mx">
-                    cotizaciones@defany.com.mx
-                </a>
+                <a href="mailto:cotizaciones@defany.com.mx">cotizaciones@defany.com.mx</a>
             </p>
         </div>
 
-        <!-- BLOQUE 4 -->
         <div class="footer-block footer-logo">
             <img src="img/logowhitesf.png" alt="Defany Industrial">
-
             <p>
                 Boulevard Manuel Ávila Camacho interior 600-A, Ext. 1903<br>
                 Colonia Ciudad Satélite<br>
@@ -139,9 +235,19 @@
         </div>
 
     </div>
-
-    <!-- PIE FINAL -->
     <div class="footer-bottom">
         © 2026 Defany Industria
     </div>
 </footer>
+
+<script>
+    const mrcObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) e.target.classList.add('visible');
+        });
+    }, { threshold: 0.10 });
+    document.querySelectorAll('.mrc-animate').forEach(el => mrcObserver.observe(el));
+</script>
+
+</body>
+</html>
