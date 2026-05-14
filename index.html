@@ -176,31 +176,27 @@
             </div>
         </div>
 
-        <div class="marcas-home__track-wrap">
-            <div class="marcas-home__track">
-                <div class="marcas-home__logo"><img src="img/logoarmstrong.png"      alt="Armstrong"></div>
-                <div class="marcas-home__logo"><img src="img/logodewit.png"          alt="De-Wit"></div>
-                <div class="marcas-home__logo"><img src="img/logovalvulascuevas.png" alt="Válvulas Cuevas"></div>
-                <div class="marcas-home__logo"><img src="img/marca-watson.png"       alt="Watson McDaniel"></div>
-                <div class="marcas-home__logo"><img src="img/vayremexlogoheader.png" alt="Vayremex"></div>
-                <div class="marcas-home__logo"><img src="img/logopicsa.png"          alt="Picsa"></div>
-                <div class="marcas-home__logo"><img src="img/inframetron.png"        alt="Inframetron"></div>
-                <div class="marcas-home__logo"><img src="img/infralogo.png"          alt="Infra"></div>
-                <div class="marcas-home__logo"><img src="img/logoaroingresol.png"    alt="Aroingresol"></div>
-                <div class="marcas-home__logo"><img src="img/deublinlogo.png"        alt="Deublin"></div>
-                <div class="marcas-home__logo"><img src="img/logo_walworth.png"      alt="Walworth"></div>
-                <div class="marcas-home__logo"><img src="img/logoarmstrong.png"      alt="Armstrong"></div>
-                <div class="marcas-home__logo"><img src="img/logodewit.png"          alt="De-Wit"></div>
-                <div class="marcas-home__logo"><img src="img/logovalvulascuevas.png" alt="Válvulas Cuevas"></div>
-                <div class="marcas-home__logo"><img src="img/marca-watson.png"       alt="Watson McDaniel"></div>
-                <div class="marcas-home__logo"><img src="img/vayremexlogoheader.png" alt="Vayremex"></div>
-                <div class="marcas-home__logo"><img src="img/logopicsa.png"          alt="Picsa"></div>
-                <div class="marcas-home__logo"><img src="img/inframetron.png"        alt="Inframetron"></div>
-                <div class="marcas-home__logo"><img src="img/infralogo.png"          alt="Infra"></div>
-                <div class="marcas-home__logo"><img src="img/logoaroingresol.png"    alt="Aroingresol"></div>
-                <div class="marcas-home__logo"><img src="img/deublinlogo.png"        alt="Deublin"></div>
-                <div class="marcas-home__logo"><img src="img/logo_walworth.png"      alt="Walworth"></div>
+        <!-- CARRUSEL 3D -->
+        <div class="marcas3d__stage" id="marcasStage">
+            <div class="marcas3d__scene" id="marcasScene">
+                <div class="marcas3d__card"><img src="img/logoarmstrong.png"      alt="Armstrong"></div>
+                <div class="marcas3d__card"><img src="img/logodewit.png"          alt="De-Wit"></div>
+                <div class="marcas3d__card"><img src="img/logovalvulascuevas.png" alt="Válvulas Cuevas"></div>
+                <div class="marcas3d__card"><img src="img/marca-watson.png"       alt="Watson McDaniel"></div>
+                <div class="marcas3d__card"><img src="img/vayremexlogoheader.png" alt="Vayremex"></div>
+                <div class="marcas3d__card"><img src="img/logopicsa.png"          alt="Picsa"></div>
+                <div class="marcas3d__card"><img src="img/inframetron.png"        alt="Inframetron"></div>
+                <div class="marcas3d__card"><img src="img/infralogo.png"          alt="Infra"></div>
+                <div class="marcas3d__card"><img src="img/logoaroingresol.png"    alt="Aroingresol"></div>
+                <div class="marcas3d__card"><img src="img/deublinlogo.png"        alt="Deublin"></div>
+                <div class="marcas3d__card"><img src="img/logo_walworth.png"      alt="Walworth"></div>
             </div>
+            <button class="marcas3d__btn marcas3d__btn--prev" id="marcasPrev" aria-label="Anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="marcas3d__btn marcas3d__btn--next" id="marcasNext" aria-label="Siguiente">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
 
         <div class="marcas-home__container">
@@ -398,6 +394,56 @@
         });
     }, { threshold: 0.12 });
     document.querySelectorAll('.corp-animate, .prod-anim').forEach(el => scrollObserver.observe(el));
+</script>
+
+<script>
+(function () {
+    var cards   = Array.from(document.querySelectorAll('#marcasScene .marcas3d__card'));
+    var n       = cards.length;
+    var active  = 0;
+    var timer   = null;
+    var CLASSES = ['is-left2','is-left1','is-center','is-right1','is-right2'];
+
+    function update() {
+        cards.forEach(function (card, i) {
+            var pos = ((i - active) % n + n) % n;
+            if (pos > Math.floor(n / 2)) pos -= n;
+            card.className = 'marcas3d__card';
+            if      (pos ===  0) card.classList.add('is-center');
+            else if (pos === -1) card.classList.add('is-left1');
+            else if (pos ===  1) card.classList.add('is-right1');
+            else if (pos === -2) card.classList.add('is-left2');
+            else if (pos ===  2) card.classList.add('is-right2');
+            else                  card.classList.add('is-hidden');
+        });
+    }
+
+    function next() { active = (active + 1) % n; update(); }
+    function prev() { active = (active - 1 + n) % n; update(); }
+
+    function startTimer() { timer = setInterval(next, 2800); }
+    function resetTimer()  { clearInterval(timer); startTimer(); }
+
+    document.getElementById('marcasNext').addEventListener('click', function () { next(); resetTimer(); });
+    document.getElementById('marcasPrev').addEventListener('click', function () { prev(); resetTimer(); });
+
+    cards.forEach(function (card, i) {
+        card.addEventListener('click', function () {
+            var pos = ((i - active) % n + n) % n;
+            if (pos > Math.floor(n / 2)) pos -= n;
+            if      (pos > 0) next();
+            else if (pos < 0) prev();
+            resetTimer();
+        });
+    });
+
+    var stage = document.getElementById('marcasStage');
+    stage.addEventListener('mouseenter', function () { clearInterval(timer); });
+    stage.addEventListener('mouseleave', startTimer);
+
+    update();
+    startTimer();
+})();
 </script>
 </body>
 </html>

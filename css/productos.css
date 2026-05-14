@@ -1,0 +1,627 @@
+/* ================================================================
+   productos.css — Página de Productos | Defany Industrial
+   ================================================================ */
+
+/* ── Tipografía base ── */
+.prd-hero, .prd-vapor, .prd-junta {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ── Contenedor centrado ── */
+.prd-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+/* ================================================================
+   HERO
+   ================================================================ */
+.prd-hero {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    min-height: 240px;
+    background: url('../img/portada-tubos.jpg') center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.prd-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(2, 4, 43, 0.92) 0%,
+        rgba(2, 4, 43, 0.74) 50%,
+        rgba(2, 4, 43, 0.55) 100%
+    );
+}
+
+.prd-hero__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0 24px;
+    max-width: 720px;
+}
+
+.prd-hero__sub {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    color: #D5EBF8;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.prd-hero__title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 0 0 18px;
+    line-height: 1.1;
+}
+
+.prd-hero__line {
+    width: 56px;
+    height: 3px;
+    background: #D5EBF8;
+    margin: 0 auto 18px;
+    border-radius: 2px;
+}
+
+.prd-hero__desc {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.7;
+    margin: 0;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* ================================================================
+   SCROLL ANIMATIONS
+   ================================================================ */
+.prd-animate {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.prd-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================================================================
+   BADGE COMPARTIDO
+   ================================================================ */
+.prd-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #D5EBF8;
+    color: #02042B;
+    font-size: 0.70rem;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+}
+
+/* ================================================================
+   BOTÓN CTA COMPARTIDO
+   ================================================================ */
+.prd-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: #02042B;
+    color: #FFFFFF;
+    padding: 14px 36px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(2, 4, 43, 0.20);
+    transition: background 0.25s, color 0.25s, transform 0.2s, box-shadow 0.2s;
+    margin-top: 8px;
+}
+
+.prd-cta i { font-size: 0.85rem; transition: transform 0.2s; }
+
+.prd-cta:hover {
+    background: #D5EBF8;
+    color: #02042B;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(2, 4, 43, 0.16);
+}
+
+.prd-cta:hover i { transform: translateX(4px); }
+
+/* ================================================================
+   01 — JUNTAS ROTATIVAS
+   ================================================================ */
+.prd-junta {
+    background: #FFFFFF;
+    padding: 96px 0 88px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Deco: círculo degradado fondo */
+.prd-junta__bg-circle {
+    position: absolute;
+    bottom: -100px;
+    left: -80px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(213,235,248,0.50) 0%, transparent 68%);
+    pointer-events: none;
+}
+
+/* Deco: líneas industriales sup-izq */
+.prd-junta__bg-lines {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 4px;
+    height: 160px;
+    background: linear-gradient(to bottom, #D5EBF8, transparent);
+    border-radius: 2px;
+    pointer-events: none;
+}
+.prd-junta__bg-lines::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 12px;
+    width: 2px;
+    height: 110px;
+    background: linear-gradient(to bottom, rgba(213,235,248,0.6), transparent);
+    border-radius: 2px;
+}
+
+.prd-junta__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+}
+
+/* ── Contenido izquierdo ── */
+.prd-junta__content { padding-right: 8px; }
+
+.prd-junta__title {
+    font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    color: #02042B;
+    margin: 0 0 20px;
+    line-height: 1.15;
+}
+
+.prd-junta__text {
+    color: #5B5B5B;
+    font-size: 0.95rem;
+    line-height: 1.80;
+    margin: 0 0 16px;
+}
+.prd-junta__text strong { color: #02042B; font-weight: 600; }
+
+.prd-junta__apps {
+    margin: 24px 0 32px;
+    background: #F4F6F8;
+    border-radius: 10px;
+    padding: 22px 24px;
+    border: 1px solid #E0EAF4;
+}
+
+.prd-junta__apps h4 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #02042B;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    margin: 0 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.prd-junta__apps h4 i { color: #4A7FA5; }
+
+.prd-junta__apps ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px 12px;
+}
+
+.prd-junta__apps ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.87rem;
+    color: #5B5B5B;
+    line-height: 1.4;
+}
+.prd-junta__apps ul li i {
+    color: #02042B;
+    font-size: 0.65rem;
+    flex-shrink: 0;
+}
+
+/* ── Composición de imágenes derecha ── */
+.prd-junta__imgs {
+    position: relative;
+    height: 460px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Imagen principal: izquierda del grupo */
+.prd-junta__img-main {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 56%;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(2, 4, 43, 0.14);
+    padding: 22px;
+    border: 1.5px solid #E0EAF4;
+    transition: box-shadow 0.3s, transform 0.3s;
+    transform: rotate(-2deg);
+}
+.prd-junta__img-main:hover {
+    box-shadow: 0 28px 72px rgba(2, 4, 43, 0.20);
+    transform: rotate(0deg) translateY(-4px);
+}
+.prd-junta__img-main img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Stack derecho: dos imágenes apiladas */
+.prd-junta__img-stack {
+    flex: 0 0 calc(44% - 16px);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    z-index: 3;
+}
+
+.prd-junta__img-sm {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 32px rgba(2, 4, 43, 0.12);
+    padding: 16px;
+    border: 1.5px solid #D5EBF8;
+    transition: transform 0.28s ease, box-shadow 0.28s;
+}
+.prd-junta__img-sm:hover {
+    transform: translateX(-5px) scale(1.04);
+    box-shadow: 0 18px 44px rgba(2, 4, 43, 0.18);
+}
+.prd-junta__img-sm img {
+    width: 100%;
+    height: 130px;
+    display: block;
+    object-fit: contain;
+}
+
+/* Badge numérico */
+.prd-junta__num-badge {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: 52px;
+    height: 52px;
+    background: #D5EBF8;
+    color: #02042B;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    z-index: 4;
+    box-shadow: 0 4px 16px rgba(2, 4, 43, 0.10);
+    letter-spacing: 0.04em;
+}
+
+/* ================================================================
+   02 — TRAMPAS DE VAPOR
+   ================================================================ */
+.prd-vapor {
+    background: #F4F6F8;
+    padding: 96px 0 88px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Detalle decorativo de fondo */
+.prd-vapor::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -80px;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(213,235,248,0.45) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.prd-vapor__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+}
+
+/* ── Contenido izquierdo ── */
+.prd-vapor__content {
+    padding-right: 8px;
+}
+
+.prd-vapor__title {
+    font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    color: #02042B;
+    margin: 0 0 20px;
+    line-height: 1.15;
+}
+
+.prd-vapor__text {
+    color: #5B5B5B;
+    font-size: 0.95rem;
+    line-height: 1.80;
+    margin: 0 0 16px;
+}
+
+.prd-vapor__text strong {
+    color: #02042B;
+    font-weight: 600;
+}
+
+/* Lista de aplicaciones */
+.prd-vapor__apps {
+    margin: 24px 0 32px;
+    background: #F4F6F8;
+    border-radius: 10px;
+    padding: 22px 24px;
+    border: 1px solid #E0EAF4;
+}
+
+.prd-vapor__apps h4 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #02042B;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    margin: 0 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.prd-vapor__apps h4 i { color: #4A7FA5; }
+
+.prd-vapor__apps ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px 12px;
+}
+
+.prd-vapor__apps ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.87rem;
+    color: #5B5B5B;
+    line-height: 1.4;
+}
+
+.prd-vapor__apps ul li i {
+    color: #02042B;
+    font-size: 0.65rem;
+    flex-shrink: 0;
+}
+
+/* ── Composición de imágenes derecha ── */
+.prd-vapor__imgs {
+    position: relative;
+    height: 480px;
+}
+
+/* Rectángulo decorativo azul claro detrás */
+.prd-vapor__bg-deco {
+    position: absolute;
+    top: 32px;
+    right: 0;
+    width: 84%;
+    height: 88%;
+    background: linear-gradient(135deg, #D5EBF8 0%, #EAF4FC 100%);
+    border-radius: 20px;
+    z-index: 0;
+}
+
+/* Imagen principal centrada */
+.prd-vapor__img-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-54%, -50%);
+    width: 64%;
+    z-index: 2;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(2, 4, 43, 0.16);
+    padding: 20px;
+    border: 1.5px solid #E0EAF4;
+}
+
+.prd-vapor__img-main img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Flotante inferior-izquierda */
+.prd-vapor__img-fl {
+    position: absolute;
+    z-index: 3;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 12px 36px rgba(2, 4, 43, 0.14);
+    padding: 14px;
+    border: 1.5px solid #D5EBF8;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.prd-vapor__img-fl:hover {
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0 20px 48px rgba(2, 4, 43, 0.20);
+}
+
+.prd-vapor__img-fl img {
+    display: block;
+    object-fit: contain;
+}
+
+.prd-vapor__img-fl--bl {
+    bottom: 20px;
+    left: 0;
+    width: 38%;
+}
+
+.prd-vapor__img-fl--bl img { width: 100%; height: auto; }
+
+.prd-vapor__img-fl--tr {
+    top: 12px;
+    right: 0;
+    width: 34%;
+}
+
+.prd-vapor__img-fl--tr img { width: 100%; height: auto; }
+
+/* Badge numérico decorativo */
+.prd-vapor__num-badge {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+    background: #02042B;
+    color: #D5EBF8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    z-index: 4;
+    box-shadow: 0 4px 16px rgba(2, 4, 43, 0.25);
+    letter-spacing: 0.04em;
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+
+@media (max-width: 1024px) {
+    .prd-junta__grid { gap: 48px; }
+    .prd-junta__imgs  { height: 400px; }
+    .prd-vapor__grid  { gap: 48px; }
+    .prd-vapor__imgs  { height: 420px; }
+}
+
+@media (max-width: 768px) {
+    .prd-hero { height: 44vh; }
+
+    /* Juntas móvil */
+    .prd-junta { padding: 64px 0 56px; }
+
+    .prd-junta__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .prd-junta__imgs {
+        order: -1;
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 480px;
+        margin: 0 auto;
+        gap: 14px;
+    }
+
+    .prd-junta__img-main {
+        transform: rotate(0deg);
+        flex: none;
+    }
+
+    .prd-junta__img-stack {
+        flex: none;
+        flex-direction: row;
+    }
+
+    .prd-junta__img-sm { flex: 1; }
+    .prd-junta__img-sm img { height: 100px; }
+
+    .prd-junta__content { order: 1; }
+    .prd-junta__apps ul { grid-template-columns: 1fr; }
+
+    /* Vapor móvil */
+    .prd-vapor { padding: 64px 0 56px; }
+
+    .prd-vapor__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .prd-vapor__imgs {
+        order: -1;
+        height: 320px;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .prd-vapor__content { order: 1; }
+    .prd-vapor__apps ul { grid-template-columns: 1fr; }
+
+    .prd-cta { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+    .prd-hero { height: 46vh; }
+    .prd-hero__sub { font-size: 0.58rem; letter-spacing: 0.18em; }
+
+    .prd-junta__img-sm img { height: 80px; }
+    .prd-junta__apps { padding: 18px; }
+
+    .prd-vapor__imgs { height: 270px; }
+    .prd-vapor__img-fl--bl { width: 34%; }
+    .prd-vapor__img-fl--tr { width: 30%; }
+    .prd-vapor__apps { padding: 18px; }
+}
