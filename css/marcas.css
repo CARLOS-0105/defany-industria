@@ -419,3 +419,189 @@
         font-size: 0.92rem;
     }
 }
+
+/* ================================================================
+   SECCIÓN DE-WIT
+   ================================================================ */
+.mrc-dewit {
+    background: #FFFFFF;
+    padding: 88px 0;
+    border-top: 1px solid #E8EFF5;
+}
+
+/* ── Grid 2 columnas (texto izq, imagen der) ── */
+.mrc-dewit__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+}
+
+/* ── Contenido izquierdo ── */
+.mrc-dewit__content {
+    padding-top: 8px;
+}
+
+.mrc-dewit__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #D5EBF8;
+    color: #02042B;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+}
+
+.mrc-dewit__title {
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 800;
+    color: #02042B;
+    margin: 0 0 20px;
+    line-height: 1.15;
+}
+
+.mrc-dewit__text {
+    color: #5B5B5B;
+    font-size: 0.95rem;
+    line-height: 1.78;
+    margin: 0 0 16px;
+}
+
+.mrc-dewit__text strong {
+    color: #02042B;
+    font-weight: 600;
+}
+
+/* ── Lista de productos ── */
+.mrc-dewit__products {
+    margin-top: 28px;
+    background: #F4F6F8;
+    border-radius: 10px;
+    padding: 24px 28px;
+    border: 1px solid #E0EAF4;
+    box-shadow: 0 2px 12px rgba(2, 4, 43, 0.05);
+}
+
+.mrc-dewit__products h4 {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #02042B;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mrc-dewit__products h4 i {
+    color: #4A7FA5;
+    font-size: 0.85rem;
+}
+
+.mrc-dewit__products ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 16px;
+}
+
+.mrc-dewit__products ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    color: #5B5B5B;
+    line-height: 1.4;
+    transition: color 0.2s;
+}
+
+.mrc-dewit__products ul li:hover {
+    color: #02042B;
+}
+
+.mrc-dewit__products ul li i {
+    color: #02042B;
+    font-size: 0.6rem;
+    flex-shrink: 0;
+}
+
+/* ── Imagen derecha ── */
+.mrc-dewit__img-wrap {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 16px 56px rgba(2, 4, 43, 0.12);
+    background: #F4F6F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    transition: box-shadow 0.3s;
+}
+
+.mrc-dewit__img-wrap:hover {
+    box-shadow: 0 24px 72px rgba(2, 4, 43, 0.18);
+}
+
+.mrc-dewit__img-wrap img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* ── Responsive De-Wit ── */
+@media (max-width: 1024px) {
+    .mrc-dewit__grid {
+        gap: 44px;
+    }
+
+    .mrc-dewit__products ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .mrc-dewit {
+        padding: 60px 0 52px;
+    }
+
+    .mrc-dewit__grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    /* En móvil: imagen arriba, texto abajo */
+    .mrc-dewit__grid {
+        direction: ltr;
+    }
+
+    .mrc-dewit__img-wrap {
+        order: -1;
+        padding: 24px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .mrc-dewit__content {
+        order: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .mrc-dewit__products {
+        padding: 20px 18px;
+    }
+
+    .mrc-dewit__title {
+        font-size: 1.7rem;
+    }
+}
