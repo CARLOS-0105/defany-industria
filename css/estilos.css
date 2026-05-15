@@ -1406,3 +1406,91 @@ footer {
     .comp-home__title { font-size: 22px; }
     .comp-card__body { padding: 20px 18px 22px; }
 }
+
+/* ================================================================
+   HERO INTERNO — páginas de producto y servicio
+   ================================================================ */
+.page-hero {
+    position: relative;
+    width: 100%;
+    height: 38vh;
+    min-height: 220px;
+    max-height: 460px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Variantes de imagen de fondo */
+.page-hero--inicio   { background-image: url('../img/iniciofondo.jpg'); }
+.page-hero--valvulas { background-image: url('../img/prtada-de-inicio-valvulas.jpg'); }
+.page-hero--tubos    { background-image: url('../img/portada-tubos.jpg'); }
+
+.page-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(2, 4, 43, 0.91) 0%,
+        rgba(2, 4, 43, 0.72) 50%,
+        rgba(2, 4, 43, 0.54) 100%
+    );
+}
+
+.page-hero__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0 24px;
+    max-width: 680px;
+    animation: pageHeroIn 0.75s ease both;
+}
+
+@keyframes pageHeroIn {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-hero__sub {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.34em;
+    color: #D5EBF8;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.page-hero__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.8rem, 4.5vw, 3rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 0 0 18px;
+    line-height: 1.1;
+}
+
+.page-hero__line {
+    width: 52px;
+    height: 3px;
+    background: linear-gradient(90deg, #D5EBF8, rgba(213, 235, 248, 0.28));
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .page-hero { height: 36vh; }
+    .page-hero__title { font-size: clamp(1.5rem, 6vw, 2.2rem); }
+    .page-hero__sub   { letter-spacing: 0.22em; }
+}
+
+@media (max-width: 480px) {
+    .page-hero { height: 32vh; min-height: 200px; }
+    .page-hero__sub { font-size: 0.58rem; }
+}
