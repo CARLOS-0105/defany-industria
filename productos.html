@@ -536,6 +536,211 @@
         </div>
     </section>
 
+    <!-- ===== 06 — MANÓMETROS Y TERMÓMETROS INDUSTRIALES ===== -->
+    <section class="prd-mano">
+        <div class="prd-container">
+            <div class="prd-mano__grid">
+
+                <!-- LADO IZQUIERDO — CARRUSEL INTERACTIVO -->
+                <div class="prd-mano__carousel-wrap prd-animate">
+
+                    <!-- Badge numérico -->
+                    <div class="prd-mano__num-badge">06</div>
+
+                    <!-- Carrusel principal -->
+                    <div class="prd-mano__carousel" id="manoCarousel">
+
+                        <!-- Barra de categoría superior -->
+                        <div class="prd-mano__carousel-header">
+                            <span class="prd-mano__carousel-cat">
+                                <i class="fa-solid fa-gauge-high"></i> Instrumentación Industrial
+                            </span>
+                            <span class="prd-mano__carousel-count" id="manoCount">1 / 5</span>
+                        </div>
+
+                        <!-- Corner brackets técnicos -->
+                        <div class="prd-mano__corner prd-mano__corner--tl"></div>
+                        <div class="prd-mano__corner prd-mano__corner--tr"></div>
+                        <div class="prd-mano__corner prd-mano__corner--bl"></div>
+                        <div class="prd-mano__corner prd-mano__corner--br"></div>
+
+                        <!-- Slides -->
+                        <div class="prd-mano__slides">
+                            <div class="prd-mano__slide is-active" data-img="img/manometro-acero.png" data-label="Manómetro Acero Inoxidable">
+                                <div class="prd-mano__slide-inner">
+                                    <img src="img/manometro-acero.png" alt="Manómetro Acero Inoxidable">
+                                </div>
+                                <div class="prd-mano__slide-footer">
+                                    <span class="prd-mano__slide-brand">Manómetro Acero Inox.</span>
+                                    <span class="prd-mano__slide-type">Alta presión</span>
+                                </div>
+                            </div>
+                            <div class="prd-mano__slide" data-img="img/termimetro-2.png" data-label="Termómetro Industrial">
+                                <div class="prd-mano__slide-inner">
+                                    <img src="img/termimetro-2.png" alt="Termómetro Industrial">
+                                </div>
+                                <div class="prd-mano__slide-footer">
+                                    <span class="prd-mano__slide-brand">Termómetro Industrial</span>
+                                    <span class="prd-mano__slide-type">Control térmico</span>
+                                </div>
+                            </div>
+                            <div class="prd-mano__slide" data-img="img/manometro-aceroylaton.png" data-label="Manómetro Acero y Latón">
+                                <div class="prd-mano__slide-inner">
+                                    <img src="img/manometro-aceroylaton.png" alt="Manómetro Acero y Latón">
+                                </div>
+                                <div class="prd-mano__slide-footer">
+                                    <span class="prd-mano__slide-brand">Manómetro Acero y Latón</span>
+                                    <span class="prd-mano__slide-type">Uso general industrial</span>
+                                </div>
+                            </div>
+                            <div class="prd-mano__slide" data-img="img/termometro-1.png" data-label="Termómetro Bimetálico">
+                                <div class="prd-mano__slide-inner">
+                                    <img src="img/termometro-1.png" alt="Termómetro Bimetálico">
+                                </div>
+                                <div class="prd-mano__slide-footer">
+                                    <span class="prd-mano__slide-brand">Termómetro Bimetálico</span>
+                                    <span class="prd-mano__slide-type">Procesos térmicos</span>
+                                </div>
+                            </div>
+                            <div class="prd-mano__slide" data-img="img/manometro-sen.png" data-label="Manómetro Seco Económico">
+                                <div class="prd-mano__slide-inner">
+                                    <img src="img/manometro-sen.png" alt="Manómetro Seco Económico">
+                                </div>
+                                <div class="prd-mano__slide-footer">
+                                    <span class="prd-mano__slide-brand">Manómetro Seco Económico</span>
+                                    <span class="prd-mano__slide-type">Uso estándar</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navegación -->
+                        <button class="prd-mano__nav prd-mano__nav--prev" id="manoPrev" aria-label="Anterior">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="prd-mano__nav prd-mano__nav--next" id="manoNext" aria-label="Siguiente">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+
+                        <!-- Dots -->
+                        <div class="prd-mano__dots">
+                            <button class="prd-mano__dot is-active" data-index="0"></button>
+                            <button class="prd-mano__dot" data-index="1"></button>
+                            <button class="prd-mano__dot" data-index="2"></button>
+                            <button class="prd-mano__dot" data-index="3"></button>
+                            <button class="prd-mano__dot" data-index="4"></button>
+                        </div>
+
+                        <!-- Ampliar -->
+                        <button class="prd-mano__zoom" id="manoZoom" aria-label="Ampliar imagen">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </button>
+
+                    </div>
+
+                    <!-- Miniaturas -->
+                    <div class="prd-mano__thumbs">
+                        <div class="prd-mano__thumb is-active" data-index="0">
+                            <img src="img/manometro-acero.png" alt="Manómetro Acero">
+                        </div>
+                        <div class="prd-mano__thumb" data-index="1">
+                            <img src="img/termimetro-2.png" alt="Termómetro">
+                        </div>
+                        <div class="prd-mano__thumb" data-index="2">
+                            <img src="img/manometro-aceroylaton.png" alt="Manómetro Latón">
+                        </div>
+                        <div class="prd-mano__thumb" data-index="3">
+                            <img src="img/termometro-1.png" alt="Termómetro Bimetálico">
+                        </div>
+                        <div class="prd-mano__thumb" data-index="4">
+                            <img src="img/manometro-sen.png" alt="Manómetro Seco">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- LADO DERECHO — CONTENIDO -->
+                <div class="prd-mano__content prd-animate">
+
+                    <span class="prd-badge">
+                        <i class="fa-solid fa-gauge-high"></i> Medición y Control Industrial
+                    </span>
+
+                    <h2 class="prd-mano__title">Manómetros y Termómetros Industriales</h2>
+
+                    <p class="prd-mano__text">
+                        Los manómetros y termómetros industriales son instrumentos para monitorear presión, vacío y temperatura dentro de procesos industriales, garantizando seguridad, eficiencia y control operativo preciso.
+                    </p>
+                    <p class="prd-mano__text">
+                        En <strong>Defany Industrial</strong> ofrecemos soluciones para sistemas de vapor, recipientes a presión, HVAC y automatización industrial con marcas como <strong>DeWit, METRON Infra, WIKA</strong> y <strong>Ashcroft</strong>.
+                    </p>
+
+                    <!-- MARCAS -->
+                    <div class="prd-mano__brands">
+                        <h4><i class="fa-solid fa-award"></i> Marcas principales</h4>
+                        <div class="prd-mano__brands-grid">
+                            <div class="prd-mano__brand-card">
+                                <div class="prd-mano__brand-dot"></div>
+                                <span class="prd-mano__brand-name">DeWit</span>
+                            </div>
+                            <div class="prd-mano__brand-card">
+                                <div class="prd-mano__brand-dot"></div>
+                                <span class="prd-mano__brand-name">METRON Infra</span>
+                            </div>
+                            <div class="prd-mano__brand-card">
+                                <div class="prd-mano__brand-dot"></div>
+                                <span class="prd-mano__brand-name">WIKA</span>
+                            </div>
+                            <div class="prd-mano__brand-card">
+                                <div class="prd-mano__brand-dot"></div>
+                                <span class="prd-mano__brand-name">Ashcroft</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SOLUCIONES -->
+                    <div class="prd-mano__solutions">
+                        <h4><i class="fa-solid fa-list-check"></i> Soluciones disponibles</h4>
+                        <ul>
+                            <li>Manómetros industriales</li>
+                            <li>Manómetros con glicerina</li>
+                            <li>Vacuómetros</li>
+                            <li>Manómetros diferenciales</li>
+                            <li>Termómetros bimetálicos</li>
+                            <li>Termómetros digitales</li>
+                            <li>Instrumentación industrial</li>
+                            <li>Accesorios y calibración</li>
+                        </ul>
+                    </div>
+
+                    <!-- APLICACIONES TAGS -->
+                    <div class="prd-mano__apps-card">
+                        <h4><i class="fa-solid fa-industry"></i> Aplicaciones industriales</h4>
+                        <div class="prd-mano__app-tags">
+                            <span>Vapor</span>
+                            <span>Calderas</span>
+                            <span>HVAC</span>
+                            <span>Procesos térmicos</span>
+                            <span>Compresores</span>
+                            <span>Automatización</span>
+                            <span>Sistemas hidráulicos</span>
+                        </div>
+                    </div>
+
+                    <!-- NOTA TÉCNICA -->
+                    <p class="prd-mano__note">
+                        Disponibles en acero inoxidable, latón y configuraciones industriales para aplicaciones de presión, temperatura y control de procesos.
+                    </p>
+
+                    <a href="productos/manometros.html" class="prd-cta">
+                        <i class="fa-solid fa-arrow-right"></i> Conocer más
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 </main>
 
 <!-- ===== FOOTER ===== -->
@@ -669,7 +874,82 @@
         document.getElementById('bombCarousel').addEventListener('mouseenter', stopAutoplay);
         document.getElementById('bombCarousel').addEventListener('mouseleave', startAutoplay);
     })();
+
+    // ── CARRUSEL MANÓMETROS ──
+    (function () {
+        const slides  = Array.from(document.querySelectorAll('.prd-mano__slide'));
+        const dots    = Array.from(document.querySelectorAll('.prd-mano__dot'));
+        const thumbs  = Array.from(document.querySelectorAll('.prd-mano__thumb'));
+        const counter = document.getElementById('manoCount');
+        let current   = 0;
+        let autoplay;
+
+        function goTo(n) {
+            slides[current].classList.remove('is-active');
+            dots[current].classList.remove('is-active');
+            thumbs[current].classList.remove('is-active');
+            current = (n + slides.length) % slides.length;
+            slides[current].classList.add('is-active');
+            dots[current].classList.add('is-active');
+            thumbs[current].classList.add('is-active');
+            if (counter) counter.textContent = (current + 1) + ' / ' + slides.length;
+        }
+
+        document.getElementById('manoPrev').addEventListener('click', (e) => { e.stopPropagation(); goTo(current - 1); });
+        document.getElementById('manoNext').addEventListener('click', (e) => { e.stopPropagation(); goTo(current + 1); });
+        dots.forEach(d  => d.addEventListener('click',  (e) => { e.stopPropagation(); goTo(+d.dataset.index); }));
+        thumbs.forEach(t => t.addEventListener('click', ()  => goTo(+t.dataset.index)));
+
+        // Lightbox
+        const lightbox = document.getElementById('manoLightbox');
+        const lbImg    = document.getElementById('manoLbImg');
+        const lbLabel  = document.getElementById('manoLbLabel');
+
+        function openLightbox() {
+            const s   = slides[current];
+            lbImg.src = s.dataset.img;
+            lbImg.alt = s.dataset.label;
+            lbLabel.textContent = s.dataset.label;
+            lightbox.classList.add('is-open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('is-open');
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('manoZoom').addEventListener('click', (e) => { e.stopPropagation(); openLightbox(); });
+        document.getElementById('manoCarousel').addEventListener('click', (e) => {
+            if (!e.target.closest('.prd-mano__nav') && !e.target.closest('.prd-mano__zoom') && !e.target.closest('.prd-mano__dots')) {
+                openLightbox();
+            }
+        });
+        document.getElementById('manoLbClose').addEventListener('click', closeLightbox);
+        document.getElementById('manoLbOverlay').addEventListener('click', closeLightbox);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+        function startAutoplay() { autoplay = setInterval(() => goTo(current + 1), 4800); }
+        function stopAutoplay()  { clearInterval(autoplay); }
+        startAutoplay();
+        document.getElementById('manoCarousel').addEventListener('mouseenter', stopAutoplay);
+        document.getElementById('manoCarousel').addEventListener('mouseleave', startAutoplay);
+    })();
 </script>
+
+<!-- LIGHTBOX — MANÓMETROS Y TERMÓMETROS -->
+<div class="prd-mano__lightbox" id="manoLightbox" aria-hidden="true">
+    <div class="prd-mano__lb-overlay" id="manoLbOverlay"></div>
+    <div class="prd-mano__lb-box">
+        <button class="prd-mano__lb-close" id="manoLbClose" aria-label="Cerrar">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img src="" alt="" id="manoLbImg" class="prd-mano__lb-img">
+        <p class="prd-mano__lb-label" id="manoLbLabel"></p>
+    </div>
+</div>
 
 <!-- LIGHTBOX — BOMBAS INDUSTRIALES -->
 <div class="prd-bomb__lightbox" id="bombLightbox" aria-hidden="true">
