@@ -264,7 +264,7 @@
 /* ── Composición de imágenes derecha ── */
 .prd-junta__imgs {
     position: relative;
-    height: 460px;
+    height: 520px;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -317,7 +317,7 @@
 }
 .prd-junta__img-sm img {
     width: 100%;
-    height: 130px;
+    height: 160px;
     display: block;
     object-fit: contain;
 }
@@ -448,7 +448,7 @@
 /* ── Composición de imágenes derecha ── */
 .prd-vapor__imgs {
     position: relative;
-    height: 480px;
+    height: 540px;
 }
 
 /* Rectángulo decorativo azul claro detrás */
@@ -578,7 +578,7 @@
 /* ── COMPOSICIÓN IZQUIERDA ── */
 .prd-vseg__imgs {
     position: relative;
-    height: 480px;
+    height: 540px;
 }
 
 /* Barra acento vertical izquierda */
@@ -903,7 +903,7 @@
 
 /* Área de imagen */
 .prd-valv__card-img {
-    height: 220px;
+    height: 270px;
     background: #FAFBFD;
     display: flex;
     padding: 24px;
@@ -1222,7 +1222,7 @@
     overflow: hidden;
     border: 2px solid #E0EAF4;
     box-shadow: 0 20px 60px rgba(2, 4, 43, 0.10);
-    height: 400px;
+    height: 480px;
     cursor: zoom-in;
     transition: box-shadow 0.3s, border-color 0.3s;
 }
@@ -1270,11 +1270,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 32px 44px 16px;
+    padding: 20px 36px 8px;
 }
 .prd-bomb__slide-inner img {
     max-width: 100%;
-    max-height: 280px;
+    max-height: 390px;
     object-fit: contain;
     display: block;
     filter: drop-shadow(0 14px 32px rgba(2, 4, 43, 0.14));
@@ -1545,7 +1545,7 @@
 .prd-mano__corner--br { bottom: 58px; right: 14px; border-bottom: 2px solid rgba(213,235,248,0.6); border-right: 2px solid rgba(213,235,248,0.6); }
 
 /* Slides */
-.prd-mano__slides { position: relative; width: 100%; height: 340px; }
+.prd-mano__slides { position: relative; width: 100%; height: 420px; }
 
 .prd-mano__slide {
     position: absolute;
@@ -1570,11 +1570,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 28px 44px 10px;
+    padding: 18px 36px 6px;
 }
 .prd-mano__slide-inner img {
     max-width: 100%;
-    max-height: 252px;
+    max-height: 345px;
     object-fit: contain;
     display: block;
     filter: drop-shadow(0 10px 24px rgba(2, 4, 43, 0.11));
@@ -1981,15 +1981,15 @@
 
 @media (max-width: 1024px) {
     .prd-junta__grid  { gap: 48px; }
-    .prd-junta__imgs  { height: 400px; }
+    .prd-junta__imgs  { height: 460px; }
     .prd-vapor__grid  { gap: 48px; }
-    .prd-vapor__imgs  { height: 420px; }
+    .prd-vapor__imgs  { height: 480px; }
     .prd-vseg__grid   { gap: 48px; }
-    .prd-vseg__imgs   { height: 440px; }
+    .prd-vseg__imgs   { height: 500px; }
     .prd-bomb__grid   { gap: 48px; }
-    .prd-bomb__carousel { height: 360px; }
+    .prd-bomb__carousel { height: 430px; }
     .prd-mano__grid   { gap: 48px; }
-    .prd-mano__carousel .prd-mano__slides { height: 300px; }
+    .prd-mano__carousel .prd-mano__slides { height: 370px; }
 }
 
 @media (max-width: 768px) {
@@ -2080,7 +2080,7 @@
 
     .prd-mano__carousel-wrap { order: 1; }
     .prd-mano__content { order: -1; }
-    .prd-mano__slides { height: 280px; }
+    .prd-mano__slides { height: 340px; }
     .prd-mano__brands-grid { grid-template-columns: repeat(2, 1fr); }
 
     /* Bombas móvil */
@@ -2094,7 +2094,7 @@
     .prd-bomb__carousel-wrap { order: -1; }
     .prd-bomb__content { order: 1; }
     .prd-bomb__brands-grid { grid-template-columns: repeat(2, 1fr); }
-    .prd-bomb__carousel { height: 320px; }
+    .prd-bomb__carousel { height: 380px; }
 
     /* Válvulas industriales tablet */
     .prd-valv { padding: 64px 0 56px; }
@@ -2133,16 +2133,16 @@
 
     /* Válvulas industriales móvil */
     .prd-valv__grid { grid-template-columns: 1fr; }
-    .prd-valv__card-img { height: 180px; }
+    .prd-valv__card-img { height: 210px; }
     .prd-valv__header-num { width: 56px; height: 56px; font-size: 1.1rem; }
 
     /* Manómetros móvil pequeño */
-    .prd-mano__slides { height: 230px; }
+    .prd-mano__slides { height: 270px; }
     .prd-mano__solutions ul { grid-template-columns: 1fr; }
     .prd-mano__lb-box { padding: 44px 22px 28px; }
 
     /* Bombas móvil pequeño */
-    .prd-bomb__carousel { height: 250px; }
+    .prd-bomb__carousel { height: 290px; }
     .prd-bomb__types ul { grid-template-columns: 1fr; }
     .prd-bomb__brands-grid { grid-template-columns: repeat(2, 1fr); }
     .prd-bomb__lb-box { padding: 44px 24px 28px; }

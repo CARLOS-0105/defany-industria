@@ -805,6 +805,30 @@
     </div>
 </footer>
 
+<!-- LIGHTBOX — MANÓMETROS Y TERMÓMETROS -->
+<div class="prd-mano__lightbox" id="manoLightbox" aria-hidden="true">
+    <div class="prd-mano__lb-overlay" id="manoLbOverlay"></div>
+    <div class="prd-mano__lb-box">
+        <button class="prd-mano__lb-close" id="manoLbClose" aria-label="Cerrar">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img src="" alt="" id="manoLbImg" class="prd-mano__lb-img">
+        <p class="prd-mano__lb-label" id="manoLbLabel"></p>
+    </div>
+</div>
+
+<!-- LIGHTBOX — BOMBAS INDUSTRIALES -->
+<div class="prd-bomb__lightbox" id="bombLightbox" aria-hidden="true">
+    <div class="prd-bomb__lb-overlay" id="bombLbOverlay"></div>
+    <div class="prd-bomb__lb-box">
+        <button class="prd-bomb__lb-close" id="bombLbClose" aria-label="Cerrar">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img src="" alt="" id="bombLbImg" class="prd-bomb__lb-img">
+        <p class="prd-bomb__lb-label" id="bombLbLabel"></p>
+    </div>
+</div>
+
 <script>
     const prdObserver = new IntersectionObserver((entries) => {
         entries.forEach(e => {
@@ -939,29 +963,6 @@
     })();
 </script>
 
-<!-- LIGHTBOX — MANÓMETROS Y TERMÓMETROS -->
-<div class="prd-mano__lightbox" id="manoLightbox" aria-hidden="true">
-    <div class="prd-mano__lb-overlay" id="manoLbOverlay"></div>
-    <div class="prd-mano__lb-box">
-        <button class="prd-mano__lb-close" id="manoLbClose" aria-label="Cerrar">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-        <img src="" alt="" id="manoLbImg" class="prd-mano__lb-img">
-        <p class="prd-mano__lb-label" id="manoLbLabel"></p>
-    </div>
-</div>
-
-<!-- LIGHTBOX — BOMBAS INDUSTRIALES -->
-<div class="prd-bomb__lightbox" id="bombLightbox" aria-hidden="true">
-    <div class="prd-bomb__lb-overlay" id="bombLbOverlay"></div>
-    <div class="prd-bomb__lb-box">
-        <button class="prd-bomb__lb-close" id="bombLbClose" aria-label="Cerrar">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-        <img src="" alt="" id="bombLbImg" class="prd-bomb__lb-img">
-        <p class="prd-bomb__lb-label" id="bombLbLabel"></p>
-    </div>
-</div>
 
 </body>
 </html>
