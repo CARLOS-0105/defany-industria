@@ -1,30 +1,31 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios - Defany Industrial</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/servicios.css">
 </head>
 <body>
-    
-    <!-- ===== HEADER ===== -->
+
+<!-- ===== HEADER ===== -->
 <header class="header">
     <div class="header-container">
-
         <div class="logo">
             <a href="index.html">
                 <img src="img/logosf2.png" alt="Defany Industrial">
             </a>
         </div>
-
         <nav class="nav">
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="marcas.html">Marcas</a></li>
-
                 <li class="dropdown">
                     <a href="productos.html" tabindex="0">Productos</a>
                     <ul class="dropdown-menu">
@@ -42,38 +43,253 @@
                         <li><a href="productos/material-de-limpieza.html">Material de Limpieza</a></li>
                     </ul>
                 </li>
-
                 <li class="dropdown">
                     <a href="servicios.html" tabindex="0">Servicios</a>
                     <ul class="dropdown-menu">
                         <li><a href="servicios/recipientes-presion.html">Recipientes sujetos a presión</a></li>
                         <li><a href="servicios/mantenimiento-estructural.html">Mantenimiento estructural</a></li>
                         <li><a href="servicios/servicios-calderas.html">Servicios a calderas</a></li>
-                        <li><a href="servicios/aislamiento-termico.html">Aislamientos T&eacute;rmicos</a></li>
+                        <li><a href="servicios/aislamiento-termico.html">Aislamientos Térmicos</a></li>
                         <li><a href="servicios/aires-acondicionados.html">Aires Acondicionados</a></li>
                     </ul>
                 </li>
-
                 <li><a href="contacto.html">Contacto</a></li>
-
                 <li class="btn-whatsapp-nav">
                     <a href="https://wa.me/525585318323" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
                 </li>
             </ul>
         </nav>
-
     </div>
 </header>
 <!-- ===== FIN HEADER ===== -->
 
 
+<main>
+
+    <!-- ===== HERO ===== -->
+    <section class="srv-hero">
+        <div class="srv-hero__overlay"></div>
+        <div class="srv-hero__content srv-animate">
+            <span class="srv-hero__sub">Soluciones y Soporte Industrial</span>
+            <h1 class="srv-hero__title">Servicios</h1>
+            <div class="srv-hero__line"></div>
+            <p class="srv-hero__desc">Servicios especializados para mantenimiento, eficiencia y operación industrial.</p>
+        </div>
+    </section>
 
 
-<!-- Pie de pagina -->
+    <!-- ===== INTRO ===== -->
+    <section class="srv-intro">
+        <div class="srv-container">
+            <div class="srv-intro__inner srv-animate">
+                <p>En Defany Industrial ofrecemos servicios especializados enfocados en mantenimiento, seguridad, eficiencia energética y soporte técnico industrial para distintos sectores productivos.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== S1: SERVICIOS A CALDERAS ===== -->
+    <section class="srv-section srv-section--light" id="calderas">
+        <div class="srv-container">
+            <div class="srv-grid">
+
+                <!-- Imagen izquierda -->
+                <div class="srv-img-panel srv-img-panel--calderas srv-animate">
+                    <div class="srv-img-panel__icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                    <span class="srv-img-panel__label">Calderas Industriales</span>
+                    <div class="srv-img-panel__corner srv-img-panel__corner--tl"></div>
+                    <div class="srv-img-panel__corner srv-img-panel__corner--tr"></div>
+                    <div class="srv-img-panel__corner srv-img-panel__corner--bl"></div>
+                    <div class="srv-img-panel__corner srv-img-panel__corner--br"></div>
+                </div>
+
+                <!-- Contenido derecha -->
+                <div class="srv-content srv-animate">
+                    <span class="srv-content__num">01 &mdash; Servicio Especializado</span>
+                    <h2>Servicios a Calderas</h2>
+                    <p>Realizamos mantenimiento, revisión y soporte especializado para sistemas de vapor y calderas industriales, optimizando seguridad, eficiencia y operación continua.</p>
+                    <ul class="srv-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Sistemas de vapor</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Mantenimiento preventivo</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Revisión industrial</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Optimización térmica</li>
+                    </ul>
+                    <a href="servicios/servicios-calderas.html" class="srv-btn">
+                        <i class="fa-solid fa-arrow-right"></i> Conocer más
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== S2: RECIPIENTES A PRESIÓN ===== -->
+    <section class="srv-section srv-section--gray" id="recipientes">
+        <div class="srv-container">
+            <div class="srv-grid srv-grid--reverse">
+
+                <!-- Imagen derecha (orden visual) -->
+                <div class="srv-img-panel srv-img-panel--recipientes srv-animate">
+                    <div class="srv-img-panel__icon"><i class="fa-solid fa-gauge-high"></i></div>
+                    <span class="srv-img-panel__label">Recipientes a Presión</span>
+                    <div class="srv-img-panel__corner srv-img-panel__corner--tl"></div>
+                    <div class="srv-img-panel__corner srv-img-panel__corner--tr"></div>
+                    <div class="srv-img-panel__corner srv-img-panel__corner--bl"></div>
+                    <div class="srv-img-panel__corner srv-img-panel__corner--br"></div>
+                </div>
+
+                <!-- Contenido izquierda -->
+                <div class="srv-content srv-animate">
+                    <span class="srv-content__num">02 &mdash; Inspección Técnica</span>
+                    <h2>Recipientes a Presión</h2>
+                    <p>Ofrecemos inspección, soporte y acompañamiento técnico para recipientes sujetos a presión conforme a requerimientos industriales y normativos.</p>
+                    <ul class="srv-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Inspección industrial</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Seguridad operativa</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Verificación técnica</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Soporte especializado</li>
+                    </ul>
+                    <a href="servicios/recipientes-presion.html" class="srv-btn">
+                        <i class="fa-solid fa-arrow-right"></i> Conocer más
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== S3: MANTENIMIENTO ESTRUCTURAL ===== -->
+    <section class="srv-section srv-section--light" id="mantenimiento">
+        <div class="srv-container">
+            <div class="srv-hcard-wrap srv-animate">
+                <div class="srv-hcard">
+
+                    <!-- Panel izquierdo decorativo -->
+                    <div class="srv-hcard__panel">
+                        <div class="srv-hcard__icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <span class="srv-hcard__panel-label">Mantenimiento Estructural</span>
+                    </div>
+
+                    <!-- Contenido derecho -->
+                    <div class="srv-hcard__content">
+                        <span class="srv-content__num">03 &mdash; Mantenimiento Industrial</span>
+                        <h2>Mantenimiento Estructural</h2>
+                        <p>Servicios enfocados en mantenimiento y mejora de instalaciones industriales, estructuras metálicas y áreas operativas.</p>
+                        <ul class="srv-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Reparación industrial</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Estructuras metálicas</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Áreas operativas</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Mantenimiento preventivo</li>
+                        </ul>
+                        <a href="servicios/mantenimiento-estructural.html" class="srv-btn">
+                            <i class="fa-solid fa-arrow-right"></i> Conocer más
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== S4: AIRES ACONDICIONADOS ===== -->
+    <section class="srv-section srv-section--gray" id="aires">
+        <div class="srv-container">
+            <div class="srv-grid">
+
+                <!-- Imagen izquierda -->
+                <div class="srv-img-panel srv-img-panel--aires srv-animate">
+                    <div class="srv-img-panel__icon"><i class="fa-solid fa-snowflake"></i></div>
+                    <span class="srv-img-panel__label">Climatización Industrial</span>
+                    <div class="srv-img-panel__corner srv-img-panel__corner--tl"></div>
+                    <div class="srv-img-panel__corner srv-img-panel__corner--tr"></div>
+                    <div class="srv-img-panel__corner srv-img-panel__corner--bl"></div>
+                    <div class="srv-img-panel__corner srv-img-panel__corner--br"></div>
+                </div>
+
+                <!-- Contenido derecha -->
+                <div class="srv-content srv-animate">
+                    <span class="srv-content__num">04 &mdash; Climatización</span>
+                    <h2>Aires Acondicionados</h2>
+                    <p>Instalación, mantenimiento y soporte para sistemas de climatización industrial y equipos HVAC.</p>
+                    <ul class="srv-list">
+                        <li><i class="fa-solid fa-circle-check"></i> HVAC</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Climatización</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Chillers</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Aire acondicionado industrial</li>
+                    </ul>
+                    <a href="servicios/aires-acondicionados.html" class="srv-btn">
+                        <i class="fa-solid fa-arrow-right"></i> Conocer más
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== S5: AISLAMIENTO TÉRMICO ===== -->
+    <section class="srv-section srv-section--light" id="aislamiento">
+        <div class="srv-container">
+            <div class="srv-grid srv-grid--reverse">
+
+                <!-- Imagen derecha (orden visual) -->
+                <div class="srv-img-panel srv-img-panel--aislamiento srv-animate">
+                    <div class="srv-img-panel__icon"><i class="fa-solid fa-temperature-half"></i></div>
+                    <span class="srv-img-panel__label">Aislamiento Térmico</span>
+                    <div class="srv-img-panel__corner srv-img-panel__corner--tl"></div>
+                    <div class="srv-img-panel__corner srv-img-panel__corner--tr"></div>
+                    <div class="srv-img-panel__corner srv-img-panel__corner--bl"></div>
+                    <div class="srv-img-panel__corner srv-img-panel__corner--br"></div>
+                </div>
+
+                <!-- Contenido izquierda -->
+                <div class="srv-content srv-animate">
+                    <span class="srv-content__num">05 &mdash; Eficiencia Energética</span>
+                    <h2>Aislamiento Térmico</h2>
+                    <p>Soluciones para conservación térmica y eficiencia energética en sistemas industriales y líneas de proceso.</p>
+                    <ul class="srv-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Ahorro energético</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Protección térmica</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Sistemas industriales</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Eficiencia operativa</li>
+                    </ul>
+                    <a href="servicios/aislamiento-termico.html" class="srv-btn">
+                        <i class="fa-solid fa-arrow-right"></i> Conocer más
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== CTA FINAL ===== -->
+    <section class="srv-cta">
+        <div class="srv-cta__inner srv-animate">
+            <h2>¿Necesitas soporte técnico industrial?</h2>
+            <p>Contáctanos y recibe atención especializada para tu proyecto o proceso industrial.</p>
+            <div class="srv-cta__btns">
+                <a href="https://wa.me/525585318323" target="_blank" class="srv-cta__btn-wa">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="contacto.html" class="srv-cta__btn-outline">
+                    <i class="fa-solid fa-envelope"></i> Contactar ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+
+
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
     <div class="footer-container">
 
-        <!-- BLOQUE 1 -->
         <div class="footer-block">
             <h3>DEFANY</h3>
             <ul class="footer-links">
@@ -84,13 +300,9 @@
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
-
-             <li><a href="terminos.html">Terminos y Condiciones</a></li>
-
-            </a>
+            <li><a href="terminos.html">Términos y Condiciones</a></li>
         </div>
 
-        <!-- BLOQUE 2 -->
         <div class="footer-block">
             <h3>Productos</h3>
             <ul class="footer-links">
@@ -102,7 +314,6 @@
             </ul>
         </div>
 
-        <!-- BLOQUE 3 -->
         <div class="footer-block">
             <h3>Contacto</h3>
             <p>
@@ -111,28 +322,19 @@
                 Col. Margarita Maza de Juárez<br>
                 Atizapán de Zaragoza, Edo. Méx. 52926
             </p>
-
             <p><strong>Teléfono:</strong> 55 5305 3149</p>
-
             <p>
                 <strong>WhatsApp:</strong><br>
-                <a href="https://wa.me/525585318323" target="_blank">
-                    55 8531 8323
-                </a>
+                <a href="https://wa.me/525585318323" target="_blank">55 8531 8323</a>
             </p>
-
             <p>
                 <strong>Correo:</strong><br>
-                <a href="mailto:cotizaciones@defany.com.mx">
-                    cotizaciones@defany.com.mx
-                </a>
+                <a href="mailto:cotizaciones@defany.com.mx">cotizaciones@defany.com.mx</a>
             </p>
         </div>
 
-        <!-- BLOQUE 4 -->
         <div class="footer-block footer-logo">
             <img src="img/logowhitesf.png" alt="Defany Industrial">
-
             <p>
                 Boulevard Manuel Ávila Camacho interior 600-A, Ext. 1903<br>
                 Colonia Ciudad Satélite<br>
@@ -141,9 +343,24 @@
         </div>
 
     </div>
-
-    <!-- PIE FINAL -->
     <div class="footer-bottom">
-        © 2026 Defany Industrial
+        &copy; 2026 Defany Industrial
     </div>
 </footer>
+
+
+<script>
+    const srvObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('visible'), i * 90);
+                srvObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.10 });
+
+    document.querySelectorAll('.srv-animate').forEach(el => srvObserver.observe(el));
+</script>
+
+</body>
+</html>
