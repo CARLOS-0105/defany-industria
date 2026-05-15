@@ -964,6 +964,534 @@
 }
 
 /* ================================================================
+   05 — BOMBAS INDUSTRIALES
+   ================================================================ */
+.prd-bomb {
+    background: #FFFFFF;
+    padding: 96px 0 88px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Barra técnica superior */
+.prd-bomb::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent 0%, #D5EBF8 25%, #02042B 55%, #D5EBF8 82%, transparent 100%);
+    pointer-events: none;
+}
+
+/* Círculo técnico esquina inferior derecha */
+.prd-bomb::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    border: 2px solid rgba(213, 235, 248, 0.55);
+    box-shadow: 0 0 0 28px rgba(213, 235, 248, 0.12), 0 0 0 56px rgba(213, 235, 248, 0.06);
+    pointer-events: none;
+}
+
+/* Línea decorativa izquierda */
+.prd-bomb__deco-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, transparent 0%, #D5EBF8 30%, #02042B 65%, transparent 100%);
+    z-index: 0;
+}
+
+/* Grid principal */
+.prd-bomb__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 72px;
+    align-items: start;
+}
+
+/* ── CONTENIDO IZQUIERDO ── */
+.prd-bomb__content { padding-right: 8px; }
+
+.prd-bomb__title {
+    font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    color: #02042B;
+    margin: 0 0 20px;
+    line-height: 1.15;
+}
+
+.prd-bomb__text {
+    color: #5B5B5B;
+    font-size: 0.94rem;
+    line-height: 1.80;
+    margin: 0 0 14px;
+}
+.prd-bomb__text strong { color: #02042B; font-weight: 600; }
+
+/* Marcas */
+.prd-bomb__brands { margin: 22px 0 20px; }
+
+.prd-bomb__brands h4 {
+    font-size: 0.77rem;
+    font-weight: 700;
+    color: #02042B;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.prd-bomb__brands h4 i { color: #4A7FA5; }
+
+.prd-bomb__brands-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.prd-bomb__brand-card {
+    background: #F4F6F8;
+    border: 1.5px solid #E0EAF4;
+    border-radius: 12px;
+    padding: 14px 10px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    transition: background 0.25s, border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    cursor: default;
+}
+.prd-bomb__brand-card:hover {
+    background: #02042B;
+    border-color: #02042B;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(2, 4, 43, 0.16);
+}
+
+.prd-bomb__brand-icon {
+    width: 36px;
+    height: 36px;
+    background: #D5EBF8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s;
+}
+.prd-bomb__brand-card:hover .prd-bomb__brand-icon { background: rgba(213, 235, 248, 0.18); }
+
+.prd-bomb__brand-icon i {
+    color: #02042B;
+    font-size: 0.85rem;
+    transition: color 0.25s;
+}
+.prd-bomb__brand-card:hover .prd-bomb__brand-icon i { color: #D5EBF8; }
+
+.prd-bomb__brand-card span {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #02042B;
+    line-height: 1.2;
+    transition: color 0.25s;
+}
+.prd-bomb__brand-card:hover span { color: #D5EBF8; }
+
+/* Tipos de bombas */
+.prd-bomb__types {
+    margin: 20px 0 18px;
+    background: #F4F6F8;
+    border-radius: 10px;
+    padding: 20px 22px;
+    border: 1px solid #E0EAF4;
+    border-left: 4px solid #02042B;
+}
+.prd-bomb__types h4 {
+    font-size: 0.77rem;
+    font-weight: 700;
+    color: #02042B;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    margin: 0 0 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.prd-bomb__types h4 i { color: #4A7FA5; }
+
+.prd-bomb__types ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+}
+.prd-bomb__types ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.86rem;
+    color: #5B5B5B;
+    line-height: 1.4;
+}
+.prd-bomb__types ul li i { color: #4A7FA5; font-size: 0.62rem; flex-shrink: 0; }
+
+/* Apps card */
+.prd-bomb__apps-card {
+    margin: 18px 0 28px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 18px 20px;
+    border: 1.5px solid #D5EBF8;
+    box-shadow: 0 2px 12px rgba(2, 4, 43, 0.05);
+}
+.prd-bomb__apps-card h4 {
+    font-size: 0.77rem;
+    font-weight: 700;
+    color: #02042B;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    margin: 0 0 11px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.prd-bomb__apps-card h4 i { color: #4A7FA5; }
+
+.prd-bomb__app-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+
+.prd-bomb__app-tags span {
+    display: inline-block;
+    background: #F4F6F8;
+    color: #02042B;
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 5px 13px;
+    border-radius: 20px;
+    border: 1px solid #D5EBF8;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    cursor: default;
+}
+.prd-bomb__app-tags span:hover {
+    background: #02042B;
+    color: #D5EBF8;
+    transform: translateY(-2px);
+}
+
+/* ── CARRUSEL DERECHO ── */
+.prd-bomb__carousel-wrap { position: relative; padding-top: 16px; }
+
+/* Badge numérico */
+.prd-bomb__num-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 56px;
+    height: 56px;
+    background: #D5EBF8;
+    color: #02042B;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 800;
+    z-index: 10;
+    box-shadow: 0 4px 16px rgba(2, 4, 43, 0.12);
+    letter-spacing: 0.04em;
+}
+
+/* Carrusel principal */
+.prd-bomb__carousel {
+    position: relative;
+    background: #F4F6F8;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid #E0EAF4;
+    box-shadow: 0 20px 60px rgba(2, 4, 43, 0.10);
+    height: 400px;
+    cursor: zoom-in;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+.prd-bomb__carousel:hover {
+    box-shadow: 0 28px 80px rgba(2, 4, 43, 0.16);
+    border-color: #D5EBF8;
+}
+
+/* Frame técnico decorativo */
+.prd-bomb__frame-deco {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 14px;
+    border: 1px dashed rgba(213, 235, 248, 0.60);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Slides */
+.prd-bomb__slides { position: relative; width: 100%; height: 100%; }
+
+.prd-bomb__slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+.prd-bomb__slide.is-active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+    z-index: 2;
+}
+
+.prd-bomb__slide-inner {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 44px 16px;
+}
+.prd-bomb__slide-inner img {
+    max-width: 100%;
+    max-height: 280px;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 14px 32px rgba(2, 4, 43, 0.14));
+    transition: transform 0.35s ease;
+}
+.prd-bomb__slide.is-active .prd-bomb__slide-inner img:hover { transform: scale(1.05); }
+
+/* Pie del slide con degradado */
+.prd-bomb__slide-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 28px 20px 14px;
+    background: linear-gradient(to top, rgba(2, 4, 43, 0.75) 0%, rgba(2, 4, 43, 0.28) 70%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    z-index: 3;
+}
+.prd-bomb__slide-brand {
+    font-size: 0.93rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 0.03em;
+}
+.prd-bomb__slide-type {
+    font-size: 0.73rem;
+    font-weight: 500;
+    color: rgba(213, 235, 248, 0.88);
+    text-align: right;
+}
+
+/* Botones nav */
+.prd-bomb__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    background: rgba(2, 4, 43, 0.72);
+    border: 1.5px solid rgba(213, 235, 248, 0.28);
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 8;
+    transition: background 0.22s, border-color 0.22s, transform 0.2s;
+    backdrop-filter: blur(4px);
+}
+.prd-bomb__nav:hover {
+    background: #02042B;
+    border-color: #D5EBF8;
+    transform: translateY(-50%) scale(1.1);
+}
+.prd-bomb__nav--prev { left: 14px; }
+.prd-bomb__nav--next { right: 14px; }
+
+/* Dots */
+.prd-bomb__dots {
+    position: absolute;
+    bottom: 54px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 8;
+}
+.prd-bomb__dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.40);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.25s, width 0.30s;
+}
+.prd-bomb__dot.is-active { width: 24px; background: #FFFFFF; }
+
+/* Botón zoom */
+.prd-bomb__zoom {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    background: rgba(2, 4, 43, 0.58);
+    border: 1px solid rgba(213, 235, 248, 0.28);
+    border-radius: 8px;
+    color: #D5EBF8;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 8;
+    transition: background 0.22s, border-color 0.22s;
+    backdrop-filter: blur(4px);
+}
+.prd-bomb__zoom:hover { background: #02042B; border-color: #D5EBF8; }
+
+/* Miniaturas */
+.prd-bomb__thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+}
+.prd-bomb__thumb {
+    background: #F4F6F8;
+    border-radius: 10px;
+    border: 2px solid #E0EAF4;
+    padding: 10px;
+    cursor: pointer;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
+}
+.prd-bomb__thumb:hover { border-color: #4A7FA5; background: #EAF4FC; }
+.prd-bomb__thumb.is-active {
+    border-color: #02042B;
+    background: #D5EBF8;
+    box-shadow: 0 4px 16px rgba(2, 4, 43, 0.12);
+}
+.prd-bomb__thumb img {
+    max-width: 100%;
+    max-height: 68px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.25s;
+}
+.prd-bomb__thumb:hover img { transform: scale(1.07); }
+
+/* ── LIGHTBOX ── */
+.prd-bomb__lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.32s ease, visibility 0.32s;
+}
+.prd-bomb__lightbox.is-open { opacity: 1; visibility: visible; }
+
+.prd-bomb__lb-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 4, 43, 0.87);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+}
+
+.prd-bomb__lb-box {
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    padding: 52px 44px 36px;
+    max-width: 700px;
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 40px 120px rgba(2, 4, 43, 0.42);
+    transform: scale(0.88);
+    transition: transform 0.36s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 1;
+}
+.prd-bomb__lightbox.is-open .prd-bomb__lb-box { transform: scale(1); }
+
+.prd-bomb__lb-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    background: #F4F6F8;
+    border: 1.5px solid #E0EAF4;
+    border-radius: 50%;
+    color: #02042B;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.prd-bomb__lb-close:hover { background: #02042B; color: #D5EBF8; border-color: #02042B; }
+
+.prd-bomb__lb-img {
+    max-width: 100%;
+    max-height: 460px;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 16px 40px rgba(2, 4, 43, 0.13));
+}
+
+.prd-bomb__lb-label {
+    margin-top: 22px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #02042B;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+/* ================================================================
    RESPONSIVE
    ================================================================ */
 
@@ -974,6 +1502,8 @@
     .prd-vapor__imgs  { height: 420px; }
     .prd-vseg__grid   { gap: 48px; }
     .prd-vseg__imgs   { height: 440px; }
+    .prd-bomb__grid   { gap: 48px; }
+    .prd-bomb__carousel { height: 360px; }
 }
 
 @media (max-width: 768px) {
@@ -1054,6 +1584,19 @@
 
     .prd-cta { width: 100%; justify-content: center; }
 
+    /* Bombas móvil */
+    .prd-bomb { padding: 64px 0 56px; }
+
+    .prd-bomb__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .prd-bomb__carousel-wrap { order: -1; }
+    .prd-bomb__content { order: 1; }
+    .prd-bomb__brands-grid { grid-template-columns: repeat(2, 1fr); }
+    .prd-bomb__carousel { height: 320px; }
+
     /* Válvulas industriales tablet */
     .prd-valv { padding: 64px 0 56px; }
 
@@ -1093,4 +1636,11 @@
     .prd-valv__grid { grid-template-columns: 1fr; }
     .prd-valv__card-img { height: 180px; }
     .prd-valv__header-num { width: 56px; height: 56px; font-size: 1.1rem; }
+
+    /* Bombas móvil pequeño */
+    .prd-bomb__carousel { height: 250px; }
+    .prd-bomb__types ul { grid-template-columns: 1fr; }
+    .prd-bomb__brands-grid { grid-template-columns: repeat(2, 1fr); }
+    .prd-bomb__lb-box { padding: 44px 24px 28px; }
+    .prd-bomb__lb-img { max-height: 320px; }
 }
