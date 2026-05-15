@@ -545,14 +545,435 @@
 }
 
 /* ================================================================
+   03 — VÁLVULAS DE SEGURIDAD Y ALIVIO
+   ================================================================ */
+.prd-vseg {
+    background: #FFFFFF;
+    padding: 96px 0 88px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Deco esquina superior derecha */
+.prd-vseg::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 28px solid rgba(213, 235, 248, 0.40);
+    pointer-events: none;
+}
+
+.prd-vseg__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+}
+
+/* ── COMPOSICIÓN IZQUIERDA ── */
+.prd-vseg__imgs {
+    position: relative;
+    height: 480px;
+}
+
+/* Barra acento vertical izquierda */
+.prd-vseg__accent {
+    position: absolute;
+    left: -28px;
+    top: 32px;
+    width: 6px;
+    height: 280px;
+    background: linear-gradient(to bottom, #02042B, #D5EBF8, transparent);
+    border-radius: 3px;
+    z-index: 0;
+}
+
+/* Imagen principal */
+.prd-vseg__img-main {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 0;
+    bottom: 148px;
+    background: #F4F6F8;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+    box-shadow: 0 20px 64px rgba(2, 4, 43, 0.12);
+    border: 1.5px solid #E0EAF4;
+    overflow: hidden;
+    z-index: 2;
+    transition: box-shadow 0.3s;
+}
+
+.prd-vseg__img-main:hover {
+    box-shadow: 0 28px 80px rgba(2, 4, 43, 0.18);
+}
+
+.prd-vseg__img-main img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Badge número en esquina de la imagen */
+.prd-vseg__img-num {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 44px;
+    height: 44px;
+    background: #02042B;
+    color: #D5EBF8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 800;
+    z-index: 3;
+    box-shadow: 0 4px 14px rgba(2, 4, 43, 0.28);
+}
+
+/* Chips flotantes inferiores — tarjeta vertical */
+.prd-vseg__chips {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 14px;
+    z-index: 4;
+}
+
+.prd-vseg__chip {
+    flex: 1;
+    background: #fff;
+    border-radius: 14px;
+    border: 1.5px solid #D5EBF8;
+    box-shadow: 0 8px 28px rgba(2, 4, 43, 0.10);
+    padding: 18px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.prd-vseg__chip:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 44px rgba(2, 4, 43, 0.16);
+    border-color: #02042B;
+}
+
+.prd-vseg__chip img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.prd-vseg__chip:hover img {
+    transform: scale(1.08);
+}
+
+.prd-vseg__chip span {
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #02042B;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+}
+
+/* ── CONTENIDO DERECHO ── */
+.prd-vseg__content { padding-left: 8px; }
+
+.prd-vseg__title {
+    font-size: clamp(1.5rem, 3.2vw, 2.3rem);
+    font-weight: 800;
+    color: #02042B;
+    margin: 0 0 20px;
+    line-height: 1.18;
+}
+
+.prd-vseg__text {
+    color: #5B5B5B;
+    font-size: 0.95rem;
+    line-height: 1.80;
+    margin: 0 0 16px;
+}
+.prd-vseg__text strong { color: #02042B; font-weight: 600; }
+
+/* Lista aplicaciones */
+.prd-vseg__apps {
+    margin: 20px 0 24px;
+    background: #F4F6F8;
+    border-radius: 10px;
+    padding: 20px 22px;
+    border: 1px solid #E0EAF4;
+}
+
+.prd-vseg__apps h4 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #02042B;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    margin: 0 0 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.prd-vseg__apps h4 i { color: #4A7FA5; }
+
+.prd-vseg__apps ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 12px;
+}
+
+.prd-vseg__apps ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.87rem;
+    color: #5B5B5B;
+    line-height: 1.4;
+}
+.prd-vseg__apps ul li i {
+    color: #02042B;
+    font-size: 0.65rem;
+    flex-shrink: 0;
+}
+
+/* Mini bloque: tags de soluciones */
+.prd-vseg__solutions {
+    margin-bottom: 28px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 18px 22px;
+    border: 1.5px solid #D5EBF8;
+    box-shadow: 0 2px 12px rgba(2, 4, 43, 0.05);
+}
+
+.prd-vseg__solutions h4 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #02042B;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.prd-vseg__solutions h4 i { color: #4A7FA5; }
+
+.prd-vseg__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.prd-vseg__tags span {
+    display: inline-block;
+    background: #F4F6F8;
+    color: #02042B;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid #D5EBF8;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    cursor: default;
+}
+
+.prd-vseg__tags span:hover {
+    background: #02042B;
+    color: #D5EBF8;
+    transform: translateY(-2px);
+}
+
+/* ================================================================
+   04 — VÁLVULAS INDUSTRIALES
+   ================================================================ */
+.prd-valv {
+    background: #F4F6F8;
+    padding: 88px 0 80px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Deco esquina inferior izquierda */
+.prd-valv::before {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: -60px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 32px solid rgba(213, 235, 248, 0.35);
+    pointer-events: none;
+}
+
+/* ── Encabezado ── */
+.prd-valv__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 56px;
+}
+
+.prd-valv__header-text { flex: 1; }
+
+.prd-valv__header-text h2 {
+    font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+    font-weight: 800;
+    color: #02042B;
+    margin: 6px 0 12px;
+    line-height: 1.15;
+}
+
+.prd-valv__header-text p {
+    color: #5B5B5B;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    max-width: 560px;
+    margin: 0;
+}
+
+.prd-valv__header-num {
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    background: #02042B;
+    color: #D5EBF8;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    box-shadow: 0 8px 24px rgba(2, 4, 43, 0.20);
+    margin-top: 6px;
+}
+
+/* ── Grid 4 tarjetas ── */
+.prd-valv__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-bottom: 52px;
+}
+
+/* ── Tarjeta ── */
+.prd-valv__card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 1.5px solid #E0EAF4;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(2, 4, 43, 0.06);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s;
+    cursor: pointer;
+}
+
+.prd-valv__card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 52px rgba(2, 4, 43, 0.14);
+    border-color: #D5EBF8;
+}
+
+/* Área de imagen */
+.prd-valv__card-img {
+    height: 220px;
+    background: #FAFBFD;
+    display: flex;
+    padding: 24px;
+    border-bottom: 1px solid #EEF2F7;
+    transition: background 0.28s;
+}
+
+.prd-valv__card:hover .prd-valv__card-img {
+    background: #EAF4FC;
+}
+
+.prd-valv__card-img--center {
+    align-items: center;
+    justify-content: center;
+}
+
+.prd-valv__card-img--bottom {
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 16px;
+}
+
+.prd-valv__card-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.32s ease;
+}
+
+.prd-valv__card:hover .prd-valv__card-img img {
+    transform: scale(1.07);
+}
+
+/* Cuerpo de la tarjeta */
+.prd-valv__card-body {
+    padding: 20px 22px 24px;
+}
+
+.prd-valv__card-body h3 {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #02042B;
+    margin: 0 0 8px;
+    line-height: 1.3;
+}
+
+.prd-valv__card-body p {
+    font-size: 0.83rem;
+    color: #5B5B5B;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ── CTA centrado ── */
+.prd-valv__cta-wrap {
+    text-align: center;
+}
+
+/* ================================================================
    RESPONSIVE
    ================================================================ */
 
 @media (max-width: 1024px) {
-    .prd-junta__grid { gap: 48px; }
+    .prd-junta__grid  { gap: 48px; }
     .prd-junta__imgs  { height: 400px; }
     .prd-vapor__grid  { gap: 48px; }
     .prd-vapor__imgs  { height: 420px; }
+    .prd-vseg__grid   { gap: 48px; }
+    .prd-vseg__imgs   { height: 440px; }
 }
 
 @media (max-width: 768px) {
@@ -610,7 +1031,43 @@
     .prd-vapor__content { order: 1; }
     .prd-vapor__apps ul { grid-template-columns: 1fr; }
 
+    /* Válvulas seguridad móvil */
+    .prd-vseg { padding: 64px 0 56px; }
+
+    .prd-vseg__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Contenido arriba, imágenes abajo en móvil */
+    .prd-vseg__content { order: -1; }
+
+    .prd-vseg__imgs {
+        order: 1;
+        height: 360px;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .prd-vseg__accent { left: -8px; }
+    .prd-vseg__apps ul { grid-template-columns: 1fr; }
+
     .prd-cta { width: 100%; justify-content: center; }
+
+    /* Válvulas industriales tablet */
+    .prd-valv { padding: 64px 0 56px; }
+
+    .prd-valv__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .prd-valv__header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .prd-valv__header-num { align-self: flex-start; }
 }
 
 @media (max-width: 480px) {
@@ -624,4 +1081,16 @@
     .prd-vapor__img-fl--bl { width: 34%; }
     .prd-vapor__img-fl--tr { width: 30%; }
     .prd-vapor__apps { padding: 18px; }
+
+    .prd-vseg__imgs   { height: 340px; }
+    .prd-vseg__chip   { padding: 14px 10px 10px; }
+    .prd-vseg__chip img { width: 60px; height: 60px; }
+    .prd-vseg__chip span { font-size: 0.70rem; }
+    .prd-vseg__apps   { padding: 18px; }
+    .prd-vseg__solutions { padding: 16px 18px; }
+
+    /* Válvulas industriales móvil */
+    .prd-valv__grid { grid-template-columns: 1fr; }
+    .prd-valv__card-img { height: 180px; }
+    .prd-valv__header-num { width: 56px; height: 56px; font-size: 1.1rem; }
 }
