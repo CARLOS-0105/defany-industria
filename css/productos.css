@@ -3959,3 +3959,359 @@
     .prd-reg__features { grid-template-columns: 1fr 1fr; }
     .prd-reg__info { gap: 14px; }
 }
+
+/* ===================================================================
+   SECCIÓN 10 — FILTROS TIPO "Y" INDUSTRIALES
+   =================================================================== */
+
+.prd-filt {
+    background: #FFFFFF;
+    padding: 88px 0 80px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Deco esquina superior izquierda */
+.prd-filt::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 28px solid rgba(213, 235, 248, 0.35);
+    pointer-events: none;
+}
+
+/* ── Encabezado ── */
+.prd-filt__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 52px;
+}
+
+.prd-filt__header-text { flex: 1; }
+
+.prd-filt__header-text h2 {
+    font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+    font-weight: 800;
+    color: #02042B;
+    margin: 6px 0 14px;
+    line-height: 1.15;
+}
+
+.prd-filt__header-text p {
+    color: #5B5B5B;
+    font-size: 0.95rem;
+    line-height: 1.78;
+    max-width: 680px;
+    margin: 0;
+}
+
+.prd-filt__header-num {
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    background: #02042B;
+    color: #D5EBF8;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    box-shadow: 0 8px 24px rgba(2, 4, 43, 0.20);
+    margin-top: 6px;
+}
+
+/* ── Grid 4 tarjetas ── */
+.prd-filt__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-bottom: 40px;
+}
+
+/* ── Tarjeta ── */
+.prd-filt__card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 1.5px solid #E0EAF4;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(2, 4, 43, 0.06);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s;
+    cursor: pointer;
+}
+
+.prd-filt__card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 52px rgba(2, 4, 43, 0.14);
+    border-color: #D5EBF8;
+}
+
+/* Área de imagen */
+.prd-filt__card-img {
+    height: 260px;
+    background: #F5F7FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    border-bottom: 1px solid #EEF2F7;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.28s;
+    cursor: zoom-in;
+}
+
+.prd-filt__card:hover .prd-filt__card-img { background: #EAF4FC; }
+
+.prd-filt__card-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.32s ease;
+}
+
+.prd-filt__card:hover .prd-filt__card-img img { transform: scale(1.07); }
+
+/* Zoom overlay */
+.prd-filt__zoom-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 4, 43, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.28s;
+    pointer-events: none;
+}
+
+.prd-filt__zoom-overlay i {
+    font-size: 1.8rem;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.28s, transform 0.28s;
+    transform: scale(0.8);
+}
+
+.prd-filt__card:hover .prd-filt__zoom-overlay { background: rgba(2, 4, 43, 0.18); }
+.prd-filt__card:hover .prd-filt__zoom-overlay i { opacity: 1; transform: scale(1); }
+
+/* Cuerpo de la tarjeta */
+.prd-filt__card-body { padding: 20px 22px 24px; }
+
+.prd-filt__card-body h3 {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #02042B;
+    margin: 0 0 8px;
+    line-height: 1.3;
+}
+
+.prd-filt__card-body p {
+    font-size: 0.83rem;
+    color: #5B5B5B;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ── Bloque informativo inferior ── */
+.prd-filt__info-block {
+    background: #F5F7FA;
+    border: 1px solid #E0EAF4;
+    border-radius: 16px;
+    padding: 36px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 44px;
+}
+
+.prd-filt__info-col { padding: 0 32px 0 0; }
+.prd-filt__info-col + .prd-filt__info-col {
+    padding: 0 0 0 32px;
+    border-left: 1px solid #E0EAF4;
+}
+
+.prd-filt__info-title {
+    font-size: 0.77rem;
+    font-weight: 700;
+    color: #02042B;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.prd-filt__info-title i { color: #4A7FA5; }
+
+/* Chips aplicaciones */
+.prd-filt__app-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+
+.prd-filt__app-chips span {
+    display: inline-block;
+    background: #FFFFFF;
+    color: #02042B;
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 5px 13px;
+    border-radius: 20px;
+    border: 1px solid #D5EBF8;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    cursor: default;
+}
+
+.prd-filt__app-chips span:hover {
+    background: #02042B;
+    color: #D5EBF8;
+    transform: translateY(-2px);
+}
+
+/* Lista beneficios */
+.prd-filt__benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px 16px;
+}
+
+.prd-filt__benefits li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 0.85rem;
+    color: #333;
+    line-height: 1.45;
+}
+
+.prd-filt__benefits li i {
+    color: #02042B;
+    font-size: 0.68rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+/* ── CTA ── */
+.prd-filt__cta-wrap { text-align: center; }
+
+/* ── Lightbox filtros ── */
+.prd-filt__lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(2,4,43,0.88);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.30s ease;
+}
+
+.prd-filt__lightbox.is-open { opacity: 1; pointer-events: auto; }
+.prd-filt__lb-overlay { position: absolute; inset: 0; z-index: 1; }
+
+.prd-filt__lb-box {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 24px;
+    max-width: min(90vw, 900px);
+    max-height: 90vh;
+}
+
+.prd-filt__lb-img {
+    max-width: 100%;
+    max-height: 74vh;
+    object-fit: contain;
+    border-radius: 12px;
+    filter: drop-shadow(0 24px 64px rgba(0,0,0,0.48));
+}
+
+.prd-filt__lb-label {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.70);
+    text-align: center;
+    margin: 0;
+}
+
+.prd-filt__lb-counter {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.44);
+}
+
+.prd-filt__lb-close {
+    position: fixed;
+    top: 18px; right: 18px; z-index: 10;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.24);
+    color: #fff; font-size: 1.2rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.prd-filt__lb-close:hover { background: rgba(255,255,255,0.24); transform: scale(1.10); }
+
+.prd-filt__lb-prev,
+.prd-filt__lb-next {
+    position: fixed;
+    top: 50%; transform: translateY(-50%); z-index: 10;
+    width: 48px; height: 48px; border-radius: 50%;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.22);
+    color: #fff; font-size: 1rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.prd-filt__lb-prev { left: 18px; }
+.prd-filt__lb-next { right: 18px; }
+.prd-filt__lb-prev:hover { background: rgba(255,255,255,0.22); transform: translateY(-50%) scale(1.10); }
+.prd-filt__lb-next:hover { background: rgba(255,255,255,0.22); transform: translateY(-50%) scale(1.10); }
+
+/* ── Responsive filtros ── */
+@media (max-width: 1024px) {
+    .prd-filt__grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .prd-filt__header { gap: 24px; }
+}
+
+@media (max-width: 768px) {
+    .prd-filt { padding: 64px 0 56px; }
+    .prd-filt__header { flex-direction: column; gap: 16px; }
+    .prd-filt__header-num { align-self: flex-start; }
+    .prd-filt__info-block { grid-template-columns: 1fr; padding: 28px 24px; }
+    .prd-filt__info-col { padding: 0; }
+    .prd-filt__info-col + .prd-filt__info-col {
+        padding: 24px 0 0;
+        border-left: none;
+        border-top: 1px solid #E0EAF4;
+    }
+    .prd-filt__benefits { grid-template-columns: 1fr; }
+    .prd-filt__lb-prev { left: 8px; }
+    .prd-filt__lb-next { right: 8px; }
+}
+
+@media (max-width: 480px) {
+    .prd-filt { padding: 52px 0 44px; }
+    .prd-filt__grid { grid-template-columns: 1fr; gap: 16px; }
+    .prd-filt__card-img { height: 200px; }
+    .prd-filt__header-num { width: 56px; height: 56px; font-size: 1.1rem; border-radius: 12px; }
+}
