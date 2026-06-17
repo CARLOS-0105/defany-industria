@@ -117,6 +117,39 @@
 }
 
 /* ================================================================
+   BADGE ROW + NUM BADGE COMPARTIDOS (secciones 07–09)
+   ================================================================ */
+.prd-badge-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.prd-badge-row .prd-badge,
+.prd-badge-row .prd-visor__badge,
+.prd-badge-row .prd-reg__badge {
+    margin-bottom: 0;
+}
+
+.prd-num-badge {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    background: #02042B;
+    color: #D5EBF8;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    box-shadow: 0 6px 20px rgba(2, 4, 43, 0.18);
+}
+
+/* ================================================================
    BOTÓN CTA COMPARTIDO
    ================================================================ */
 .prd-cta {
@@ -4314,4 +4347,358 @@
     .prd-filt__grid { grid-template-columns: 1fr; gap: 16px; }
     .prd-filt__card-img { height: 200px; }
     .prd-filt__header-num { width: 56px; height: 56px; font-size: 1.1rem; border-radius: 12px; }
+}
+
+/* ===================================================================
+   SEPARADOR — PRODUCTOS ADICIONALES PARA LA INDUSTRIA
+   =================================================================== */
+
+.prd-sep {
+    background: #02042B;
+    padding: 80px 0 72px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.prd-sep::before,
+.prd-sep::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    border: 24px solid rgba(213, 235, 248, 0.07);
+    pointer-events: none;
+}
+
+.prd-sep::before { width: 280px; height: 280px; top: -80px; left: -60px; }
+.prd-sep::after  { width: 200px; height: 200px; bottom: -50px; right: -30px; }
+
+.prd-sep__inner { position: relative; z-index: 1; }
+
+.prd-sep__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(213, 235, 248, 0.10);
+    color: #D5EBF8;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 20px;
+    border: 1px solid rgba(213, 235, 248, 0.20);
+    margin-bottom: 22px;
+}
+
+.prd-sep__badge i { font-size: 0.75rem; }
+
+.prd-sep__title {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.12;
+    margin: 0 auto 20px;
+    max-width: 700px;
+}
+
+.prd-sep__text {
+    font-size: 0.95rem;
+    color: rgba(213, 235, 248, 0.72);
+    line-height: 1.80;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.prd-sep__text strong { color: #D5EBF8; }
+
+/* ===================================================================
+   SECCIÓN 11 — EQUIPO DE SEGURIDAD
+   =================================================================== */
+
+.prd-seg {
+    background: #F4F6F8;
+    padding: 88px 0 80px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.prd-seg::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    border: 28px solid rgba(2, 4, 43, 0.04);
+    pointer-events: none;
+}
+
+/* ── Encabezado ── */
+.prd-seg__header { margin-bottom: 44px; }
+
+.prd-seg__title {
+    font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+    font-weight: 800;
+    color: #02042B;
+    margin: 14px 0 14px;
+    line-height: 1.15;
+}
+
+.prd-seg__intro {
+    font-size: 0.95rem;
+    color: #5B5B5B;
+    line-height: 1.78;
+    max-width: 680px;
+    margin: 0;
+}
+
+.prd-seg__intro strong { color: #02042B; }
+
+/* ── Grid 5 tarjetas ── */
+.prd-seg__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    margin-bottom: 36px;
+}
+
+/* ── Tarjeta ── */
+.prd-seg__card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 1.5px solid #E0EAF4;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(2, 4, 43, 0.06);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s;
+    cursor: zoom-in;
+    display: flex;
+    flex-direction: column;
+}
+
+.prd-seg__card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 16px 48px rgba(2, 4, 43, 0.12);
+    border-color: #D5EBF8;
+}
+
+/* Área de imagen */
+.prd-seg__card-img {
+    height: 220px;
+    background: #F5F7FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #EEF2F7;
+    transition: background 0.28s;
+}
+
+.prd-seg__card:hover .prd-seg__card-img { background: #EAF4FC; }
+
+.prd-seg__card-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.32s ease;
+}
+
+.prd-seg__card:hover .prd-seg__card-img img { transform: scale(1.08); }
+
+/* Zoom overlay */
+.prd-seg__zoom-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 4, 43, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.28s;
+    pointer-events: none;
+}
+
+.prd-seg__zoom-overlay i {
+    font-size: 1.6rem;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.28s, transform 0.28s;
+    transform: scale(0.8);
+}
+
+.prd-seg__card:hover .prd-seg__zoom-overlay { background: rgba(2, 4, 43, 0.18); }
+.prd-seg__card:hover .prd-seg__zoom-overlay i { opacity: 1; transform: scale(1); }
+
+/* Nombre del producto */
+.prd-seg__card-name {
+    padding: 14px 12px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #02042B;
+    text-align: center;
+    line-height: 1.3;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Bloque de categorías ── */
+.prd-seg__cats {
+    background: #FFFFFF;
+    border: 1px solid #E0EAF4;
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 40px;
+}
+
+.prd-seg__cats-title {
+    font-size: 0.77rem;
+    font-weight: 700;
+    color: #02042B;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.prd-seg__cats-title i { color: #4A7FA5; }
+
+.prd-seg__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.prd-seg__chips span {
+    display: inline-block;
+    background: #F5F7FA;
+    color: #02042B;
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid #D5EBF8;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    cursor: default;
+}
+
+.prd-seg__chips span:hover {
+    background: #02042B;
+    color: #D5EBF8;
+    transform: translateY(-2px);
+}
+
+/* ── CTA ── */
+.prd-seg__cta-wrap { text-align: center; }
+
+/* ── Lightbox equipo de seguridad ── */
+.prd-seg__lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(2, 4, 43, 0.88);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.30s ease;
+}
+
+.prd-seg__lightbox.is-open { opacity: 1; pointer-events: auto; }
+.prd-seg__lb-overlay { position: absolute; inset: 0; z-index: 1; }
+
+.prd-seg__lb-box {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 24px;
+    max-width: min(90vw, 900px);
+    max-height: 90vh;
+}
+
+.prd-seg__lb-img {
+    max-width: 100%;
+    max-height: 74vh;
+    object-fit: contain;
+    border-radius: 12px;
+    filter: drop-shadow(0 24px 64px rgba(0,0,0,0.48));
+}
+
+.prd-seg__lb-label {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.70);
+    text-align: center;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.prd-seg__lb-counter {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.44);
+    font-family: 'Poppins', sans-serif;
+}
+
+.prd-seg__lb-close {
+    position: fixed;
+    top: 18px; right: 18px; z-index: 10;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    color: #fff; font-size: 1.2rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.prd-seg__lb-close:hover { background: rgba(255,255,255,0.24); transform: scale(1.10); }
+
+.prd-seg__lb-prev,
+.prd-seg__lb-next {
+    position: fixed;
+    top: 50%; transform: translateY(-50%); z-index: 10;
+    width: 48px; height: 48px; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #fff; font-size: 1rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.prd-seg__lb-prev { left: 18px; }
+.prd-seg__lb-next { right: 18px; }
+.prd-seg__lb-prev:hover { background: rgba(255,255,255,0.22); transform: translateY(-50%) scale(1.10); }
+.prd-seg__lb-next:hover { background: rgba(255,255,255,0.22); transform: translateY(-50%) scale(1.10); }
+
+/* ── Responsive separador + sección 11 ── */
+@media (max-width: 1024px) {
+    .prd-seg__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .prd-sep { padding: 64px 0 56px; }
+    .prd-seg { padding: 64px 0 56px; }
+    .prd-seg__grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .prd-seg__cats { padding: 22px 20px; }
+    .prd-seg__lb-prev { left: 8px; }
+    .prd-seg__lb-next { right: 8px; }
+}
+
+@media (max-width: 480px) {
+    .prd-sep { padding: 52px 0 44px; }
+    .prd-sep__title { font-size: 1.5rem; }
+    .prd-seg { padding: 52px 0 44px; }
+    .prd-seg__grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .prd-seg__card-img { height: 160px; }
 }
