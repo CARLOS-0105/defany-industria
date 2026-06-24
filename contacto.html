@@ -442,6 +442,16 @@
             cntBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Enviar mensaje';
         }
     });
+
+    // ── Leer solicitud de Junta Rotativa desde configurador ──
+    (function () {
+        var solicitud = localStorage.getItem('juntaRotativaSolicitud');
+        var campo     = document.getElementById('mensaje');
+        if (solicitud && campo && !campo.value) {
+            campo.value = 'SOLICITUD DE JUNTA ROTATIVA\n\n' + solicitud + '\n\nFavor de enviarme información y cotización.';
+            localStorage.removeItem('juntaRotativaSolicitud');
+        }
+    })();
 </script>
 
 </body>
