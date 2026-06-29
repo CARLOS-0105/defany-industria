@@ -287,9 +287,20 @@
    S1: QUÉ ES
    ============================================================ */
 .vi-que-es {
-    padding: 88px 0;
+    padding: 52px 0 88px;
     background: var(--vi-white);
 }
+
+.vi-que-es__intro {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--vi-navy);
+    border-left: 4px solid var(--vi-blue);
+    padding-left: 16px;
+    margin-bottom: 18px !important;
+    line-height: 1.7;
+}
+.vi-que-es__intro strong { color: var(--vi-accent); }
 .vi-que-es__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
