@@ -452,6 +452,16 @@
             localStorage.removeItem('juntaRotativaSolicitud');
         }
     })();
+
+    // ── Leer solicitud de Válvula Industrial desde configurador ──
+    (function () {
+        var solicitud = localStorage.getItem('valvulaIndustrialSeleccionada');
+        var campo     = document.getElementById('mensaje');
+        if (solicitud && campo && !campo.value) {
+            campo.value = 'SOLICITUD DE VÁLVULA INDUSTRIAL\n\n' + solicitud + '\n\nFavor de enviarme información y cotización.';
+            localStorage.removeItem('valvulaIndustrialSeleccionada');
+        }
+    })();
 </script>
 
 </body>
