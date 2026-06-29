@@ -25,8 +25,7 @@
    HERO
    ============================================================ */
 .page-hero--valvulas {
-    background-image: url('../img/valvula-bola-esfera.png');
-    background-color: var(--vi-navy);
+    background-image: url('../img/iniciofondo.jpg');
 }
 
 .vi-hero__sub {
