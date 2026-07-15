@@ -462,6 +462,56 @@
             localStorage.removeItem('valvulaIndustrialSeleccionada');
         }
     })();
+
+    // ── Leer solicitud de Bomba Industrial desde configurador ──
+    (function () {
+        var solicitud = localStorage.getItem('bombaIndustrialSolicitud');
+        var campo     = document.getElementById('mensaje');
+        if (solicitud && campo && !campo.value) {
+            campo.value = solicitud + '\n\nFavor de enviarme información y cotización.';
+            localStorage.removeItem('bombaIndustrialSolicitud');
+        }
+    })();
+
+    // ── Leer solicitud de Visor de Flujo desde configurador ──
+    (function () {
+        var solicitud = localStorage.getItem('visorFlujoSolicitud');
+        var campo     = document.getElementById('mensaje');
+        if (solicitud && campo && !campo.value) {
+            campo.value = solicitud + '\n\nFavor de enviarme información y cotización.';
+            localStorage.removeItem('visorFlujoSolicitud');
+        }
+    })();
+
+    // ── Leer solicitud de Regulador de Presión desde configurador ──
+    (function () {
+        var solicitud = localStorage.getItem('reguladorPresionSolicitud');
+        var campo     = document.getElementById('mensaje');
+        if (solicitud && campo && !campo.value) {
+            campo.value = solicitud + '\n\nFavor de enviarme información y cotización.';
+            localStorage.removeItem('reguladorPresionSolicitud');
+        }
+    })();
+
+    // ── Leer solicitud de Recipiente a Presión desde configurador ──
+    (function () {
+        var solicitud = localStorage.getItem('recipientePresionSolicitud');
+        var campo     = document.getElementById('mensaje');
+        if (solicitud && campo && !campo.value) {
+            campo.value = solicitud + '\n\nFavor de enviarme información y cotización.';
+            localStorage.removeItem('recipientePresionSolicitud');
+        }
+    })();
+
+    // ── Leer solicitud de Filtro Industrial desde configurador ──
+    (function () {
+        var solicitud = localStorage.getItem('filtroIndustrialSolicitud');
+        var campo     = document.getElementById('mensaje');
+        if (solicitud && campo && !campo.value) {
+            campo.value = solicitud + '\n\nFavor de enviarme información y cotización.';
+            localStorage.removeItem('filtroIndustrialSolicitud');
+        }
+    })();
 </script>
 
 </body>
